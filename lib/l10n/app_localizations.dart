@@ -1,0 +1,500 @@
+import 'dart:async';
+
+import 'package:flutter/foundation.dart';
+import 'package:flutter/widgets.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:intl/intl.dart' as intl;
+
+import 'app_localizations_en.dart';
+import 'app_localizations_zh.dart';
+
+// ignore_for_file: type=lint
+
+/// Callers can lookup localized strings with an instance of AppLocalizations
+/// returned by `AppLocalizations.of(context)`.
+///
+/// Applications need to include `AppLocalizations.delegate()` in their app's
+/// `localizationDelegates` list, and the locales they support in the app's
+/// `supportedLocales` list. For example:
+///
+/// ```dart
+/// import 'l10n/app_localizations.dart';
+///
+/// return MaterialApp(
+///   localizationsDelegates: AppLocalizations.localizationsDelegates,
+///   supportedLocales: AppLocalizations.supportedLocales,
+///   home: MyApplicationHome(),
+/// );
+/// ```
+///
+/// ## Update pubspec.yaml
+///
+/// Please make sure to update your pubspec.yaml to include the following
+/// packages:
+///
+/// ```yaml
+/// dependencies:
+///   # Internationalization support.
+///   flutter_localizations:
+///     sdk: flutter
+///   intl: any # Use the pinned version from flutter_localizations
+///
+///   # Rest of dependencies
+/// ```
+///
+/// ## iOS Applications
+///
+/// iOS applications define key application metadata, including supported
+/// locales, in an Info.plist file that is built into the application bundle.
+/// To configure the locales supported by your app, you’ll need to edit this
+/// file.
+///
+/// First, open your project’s ios/Runner.xcworkspace Xcode workspace file.
+/// Then, in the Project Navigator, open the Info.plist file under the Runner
+/// project’s Runner folder.
+///
+/// Next, select the Information Property List item, select Add Item from the
+/// Editor menu, then select Localizations from the pop-up menu.
+///
+/// Select and expand the newly-created Localizations item then, for each
+/// locale your application supports, add a new item and select the locale
+/// you wish to add from the pop-up menu in the Value field. This list should
+/// be consistent with the languages listed in the AppLocalizations.supportedLocales
+/// property.
+abstract class AppLocalizations {
+  AppLocalizations(String locale)
+    : localeName = intl.Intl.canonicalizedLocale(locale.toString());
+
+  final String localeName;
+
+  static AppLocalizations? of(BuildContext context) {
+    return Localizations.of<AppLocalizations>(context, AppLocalizations);
+  }
+
+  static const LocalizationsDelegate<AppLocalizations> delegate =
+      _AppLocalizationsDelegate();
+
+  /// A list of this localizations delegate along with the default localizations
+  /// delegates.
+  ///
+  /// Returns a list of localizations delegates containing this delegate along with
+  /// GlobalMaterialLocalizations.delegate, GlobalCupertinoLocalizations.delegate,
+  /// and GlobalWidgetsLocalizations.delegate.
+  ///
+  /// Additional delegates can be added by appending to this list in
+  /// MaterialApp. This list does not have to be used at all if a custom list
+  /// of delegates is preferred or required.
+  static const List<LocalizationsDelegate<dynamic>> localizationsDelegates =
+      <LocalizationsDelegate<dynamic>>[
+        delegate,
+        GlobalMaterialLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+      ];
+
+  /// A list of this localizations delegate's supported locales.
+  static const List<Locale> supportedLocales = <Locale>[
+    Locale('en'),
+    Locale('zh'),
+  ];
+
+  /// No description provided for @appTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'The Oracle'**
+  String get appTitle;
+
+  /// No description provided for @bottomNavQuick.
+  ///
+  /// In en, this message translates to:
+  /// **'Quick'**
+  String get bottomNavQuick;
+
+  /// No description provided for @bottomNavAiDraw.
+  ///
+  /// In en, this message translates to:
+  /// **'AI Draw'**
+  String get bottomNavAiDraw;
+
+  /// No description provided for @bottomNavOracle.
+  ///
+  /// In en, this message translates to:
+  /// **'Oracle'**
+  String get bottomNavOracle;
+
+  /// No description provided for @bottomNavMe.
+  ///
+  /// In en, this message translates to:
+  /// **'Me'**
+  String get bottomNavMe;
+
+  /// No description provided for @settingsTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Settings'**
+  String get settingsTitle;
+
+  /// No description provided for @settingsAppearance.
+  ///
+  /// In en, this message translates to:
+  /// **'Appearance'**
+  String get settingsAppearance;
+
+  /// No description provided for @settingsTheme.
+  ///
+  /// In en, this message translates to:
+  /// **'Theme'**
+  String get settingsTheme;
+
+  /// No description provided for @settingsThemeSystem.
+  ///
+  /// In en, this message translates to:
+  /// **'System Default'**
+  String get settingsThemeSystem;
+
+  /// No description provided for @settingsThemeLight.
+  ///
+  /// In en, this message translates to:
+  /// **'Light'**
+  String get settingsThemeLight;
+
+  /// No description provided for @settingsThemeDark.
+  ///
+  /// In en, this message translates to:
+  /// **'Dark'**
+  String get settingsThemeDark;
+
+  /// No description provided for @settingsPreferences.
+  ///
+  /// In en, this message translates to:
+  /// **'Preferences'**
+  String get settingsPreferences;
+
+  /// No description provided for @settingsLanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'Language'**
+  String get settingsLanguage;
+
+  /// No description provided for @settingsLanguageSystem.
+  ///
+  /// In en, this message translates to:
+  /// **'System Default'**
+  String get settingsLanguageSystem;
+
+  /// No description provided for @settingsLanguageEnglish.
+  ///
+  /// In en, this message translates to:
+  /// **'English'**
+  String get settingsLanguageEnglish;
+
+  /// No description provided for @settingsLanguageChinese.
+  ///
+  /// In en, this message translates to:
+  /// **'简体中文'**
+  String get settingsLanguageChinese;
+
+  /// No description provided for @settingsLanguageTraditionalChinese.
+  ///
+  /// In en, this message translates to:
+  /// **'繁體中文'**
+  String get settingsLanguageTraditionalChinese;
+
+  /// No description provided for @settingsLanguageJapanese.
+  ///
+  /// In en, this message translates to:
+  /// **'日本語'**
+  String get settingsLanguageJapanese;
+
+  /// No description provided for @settingsAbout.
+  ///
+  /// In en, this message translates to:
+  /// **'About'**
+  String get settingsAbout;
+
+  /// No description provided for @settingsVersion.
+  ///
+  /// In en, this message translates to:
+  /// **'Version'**
+  String get settingsVersion;
+
+  /// No description provided for @quickPickTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Make a Choice'**
+  String get quickPickTitle;
+
+  /// No description provided for @quickPickCoinFlip.
+  ///
+  /// In en, this message translates to:
+  /// **'Coin Flip'**
+  String get quickPickCoinFlip;
+
+  /// No description provided for @quickPickDiceRoll.
+  ///
+  /// In en, this message translates to:
+  /// **'Dice Roll'**
+  String get quickPickDiceRoll;
+
+  /// No description provided for @quickPickDrawCard.
+  ///
+  /// In en, this message translates to:
+  /// **'Draw Card'**
+  String get quickPickDrawCard;
+
+  /// No description provided for @oraclePickTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Tarot Workshop'**
+  String get oraclePickTitle;
+
+  /// No description provided for @oraclePickLibrary.
+  ///
+  /// In en, this message translates to:
+  /// **'Library'**
+  String get oraclePickLibrary;
+
+  /// No description provided for @oraclePickDailyDraw.
+  ///
+  /// In en, this message translates to:
+  /// **'Daily Draw'**
+  String get oraclePickDailyDraw;
+
+  /// No description provided for @oraclePickClassicSpread.
+  ///
+  /// In en, this message translates to:
+  /// **'Classic Spread'**
+  String get oraclePickClassicSpread;
+
+  /// No description provided for @tarotDisplayTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Tarot'**
+  String get tarotDisplayTitle;
+
+  /// No description provided for @tarotDisplaySelectCard.
+  ///
+  /// In en, this message translates to:
+  /// **'Select Tarot Card'**
+  String get tarotDisplaySelectCard;
+
+  /// No description provided for @tarotDisplayUprightMeaning.
+  ///
+  /// In en, this message translates to:
+  /// **'Upright Meaning'**
+  String get tarotDisplayUprightMeaning;
+
+  /// No description provided for @tarotDisplayReversedMeaning.
+  ///
+  /// In en, this message translates to:
+  /// **'Reversed Meaning'**
+  String get tarotDisplayReversedMeaning;
+
+  /// No description provided for @tarotDisplayKeywords.
+  ///
+  /// In en, this message translates to:
+  /// **'Keywords: {keywords}'**
+  String tarotDisplayKeywords(Object keywords);
+
+  /// No description provided for @singleDrawTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Reveal Fate'**
+  String get singleDrawTitle;
+
+  /// No description provided for @singleDrawReversed.
+  ///
+  /// In en, this message translates to:
+  /// **'REVERSED'**
+  String get singleDrawReversed;
+
+  /// No description provided for @singleDrawTapToReveal.
+  ///
+  /// In en, this message translates to:
+  /// **'TAP CARD TO REVEAL'**
+  String get singleDrawTapToReveal;
+
+  /// No description provided for @singleDrawShowMeaning.
+  ///
+  /// In en, this message translates to:
+  /// **'SHOW MEANING'**
+  String get singleDrawShowMeaning;
+
+  /// No description provided for @pastPresentFutureTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Three Fates'**
+  String get pastPresentFutureTitle;
+
+  /// No description provided for @pastPresentFuturePast.
+  ///
+  /// In en, this message translates to:
+  /// **'THE PAST'**
+  String get pastPresentFuturePast;
+
+  /// No description provided for @pastPresentFuturePresent.
+  ///
+  /// In en, this message translates to:
+  /// **'THE PRESENT'**
+  String get pastPresentFuturePresent;
+
+  /// No description provided for @pastPresentFutureFuture.
+  ///
+  /// In en, this message translates to:
+  /// **'THE FUTURE'**
+  String get pastPresentFutureFuture;
+
+  /// No description provided for @pastPresentFuturePastDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Roots of the matter'**
+  String get pastPresentFuturePastDesc;
+
+  /// No description provided for @pastPresentFuturePresentDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Current energy'**
+  String get pastPresentFuturePresentDesc;
+
+  /// No description provided for @pastPresentFutureFutureDesc.
+  ///
+  /// In en, this message translates to:
+  /// **'Potential outcome'**
+  String get pastPresentFutureFutureDesc;
+
+  /// No description provided for @pastPresentFutureReadFullMeaning.
+  ///
+  /// In en, this message translates to:
+  /// **'READ FULL MEANING'**
+  String get pastPresentFutureReadFullMeaning;
+
+  /// No description provided for @readingSummaryTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Reading Summary'**
+  String get readingSummaryTitle;
+
+  /// No description provided for @readingSummaryReversedAbbr.
+  ///
+  /// In en, this message translates to:
+  /// **'REV'**
+  String get readingSummaryReversedAbbr;
+
+  /// No description provided for @clearHistory.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear History'**
+  String get clearHistory;
+
+  /// No description provided for @clearHistoryConfirmation.
+  ///
+  /// In en, this message translates to:
+  /// **'This will delete all non-favorited entries. This action cannot be undone.'**
+  String get clearHistoryConfirmation;
+
+  /// No description provided for @cancel.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get cancel;
+
+  /// No description provided for @clear.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear'**
+  String get clear;
+
+  /// No description provided for @noHistory.
+  ///
+  /// In en, this message translates to:
+  /// **'No history yet.'**
+  String get noHistory;
+
+  /// No description provided for @question.
+  ///
+  /// In en, this message translates to:
+  /// **'Question'**
+  String get question;
+
+  /// No description provided for @deleteRecord.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete Record?'**
+  String get deleteRecord;
+
+  /// No description provided for @deleteRecordConfirmation.
+  ///
+  /// In en, this message translates to:
+  /// **'Are you sure you want to remove the record for \'{cardName}\'? This action cannot be undone.'**
+  String deleteRecordConfirmation(Object cardName);
+
+  /// No description provided for @recordDeleted.
+  ///
+  /// In en, this message translates to:
+  /// **'Record deleted'**
+  String get recordDeleted;
+
+  /// No description provided for @delete.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete'**
+  String get delete;
+
+  /// No description provided for @editQuestion.
+  ///
+  /// In en, this message translates to:
+  /// **'Edit Question'**
+  String get editQuestion;
+
+  /// No description provided for @editQuestionHint.
+  ///
+  /// In en, this message translates to:
+  /// **'What was your question?'**
+  String get editQuestionHint;
+
+  /// No description provided for @save.
+  ///
+  /// In en, this message translates to:
+  /// **'Save'**
+  String get save;
+
+  /// No description provided for @tripleCardHistoryTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Three Card Spread History'**
+  String get tripleCardHistoryTitle;
+}
+
+class _AppLocalizationsDelegate
+    extends LocalizationsDelegate<AppLocalizations> {
+  const _AppLocalizationsDelegate();
+
+  @override
+  Future<AppLocalizations> load(Locale locale) {
+    return SynchronousFuture<AppLocalizations>(lookupAppLocalizations(locale));
+  }
+
+  @override
+  bool isSupported(Locale locale) =>
+      <String>['en', 'zh'].contains(locale.languageCode);
+
+  @override
+  bool shouldReload(_AppLocalizationsDelegate old) => false;
+}
+
+AppLocalizations lookupAppLocalizations(Locale locale) {
+  // Lookup logic when only language code is specified.
+  switch (locale.languageCode) {
+    case 'en':
+      return AppLocalizationsEn();
+    case 'zh':
+      return AppLocalizationsZh();
+  }
+
+  throw FlutterError(
+    'AppLocalizations.delegate failed to load unsupported locale "$locale". This is likely '
+    'an issue with the localizations generation tool. Please file an issue '
+    'on GitHub with a reproducible sample app and the gen-l10n configuration '
+    'that was used.',
+  );
+}

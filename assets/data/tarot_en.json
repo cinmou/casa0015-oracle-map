@@ -1,0 +1,1174 @@
+{
+  "cards": [
+    {
+      "name": "The Fool",
+      "number": "0",
+      "arcana": "Major Arcana",
+      "suit": null,
+      "img": "00-TheFool.png",
+      "upright": {
+        "keywords": ["Beginnings", "Innocence", "Spontaneity", "Free Spirit"],
+        "meaning": "The Fool marks the start of a journey. He is a soul looking for experience, standing at a cliff’s edge without fear. This card encourages you to leave doubt behind and move forward with the trust of a child. You are entering a new phase where anything is possible. Trust your instincts and take that first step into the unknown. The sun behind you suggests the universe supports this move, even if you do not know exactly where it leads."
+      },
+      "reversed": {
+        "keywords": ["Recklessness", "Risk-taking", "Holding back"],
+        "meaning": "When reversed, the Fool’s energy becomes unstable. The desire for freedom can turn into poor judgment or a lack of responsibility. You might be acting without thinking about the consequences, or perhaps you are frozen by the fear of making a mistake. It suggests a time to stop and look before you leap. Be careful not to let a \"fresh start\" become a blind risk. You need to ground yourself and consider the reality of the situation before moving further."
+      }
+    },
+    {
+      "name": "The Magician",
+      "number": "1",
+      "arcana": "Major Arcana",
+      "suit": null,
+      "img": "01-TheMagician.png",
+      "upright": {
+        "keywords": ["Manifestation", "Resourcefulness", "Power", "Inspired Action"],
+        "meaning": "The Magician represents the ability to bridge heaven and earth. He stands with one hand toward the sky and the other toward the ground, acting as a channel for spiritual power to reach the physical world. On his table lie the four symbols of the Tarot, showing that he has all the tools needed to shape his life. This card is about taking conscious action and using your willpower to turn ideas into reality. It marks a time when you have the gifts and resources to master your environment and achieve your goals."
+      },
+      "reversed": {
+        "keywords": ["Manipulation", "Poor Planning", "Untapped Talents"],
+        "meaning": "When reversed, the Magician’s power is blocked or misused. You may have the necessary tools but lack the discipline to use them effectively, or you might be using your influence to deceive others. It often indicates a disconnect between your intentions and your actions. Instead of creating something meaningful, energy is wasted on poor choices or hidden agendas. This is a sign to re-evaluate your motives and check if you are ignoring your true potential or letting opportunities slip away through lack of focus."
+      }
+    },
+    {
+      "name": "The High Priestess",
+      "number": "2",
+      "arcana": "Major Arcana",
+      "suit": null,
+      "img": "02-TheHighPriestess.png",
+      "upright": {
+        "keywords": ["Intuition", "Sacred Knowledge", "Divine Feminine", "Subconscious Mind"],
+        "meaning": "The High Priestess sits at the threshold of the sacred temple, positioned between the pillars of light and darkness. She holds the scroll of higher law, representing knowledge that is felt rather than spoken. This card suggests that the answers you seek are within your own subconscious. It is a time to trust your inner voice and look beyond the surface of things. She acts as a guide to the mysteries of the spirit, reminding you that silence and reflection can reveal truths that the physical world cannot see."
+      },
+      "reversed": {
+        "keywords": ["Secrets", "Disconnected from Intuition", "Withdrawal", "Silence"],
+        "meaning": "When reversed, the High Priestess indicates a disconnect from your inner self. You may be ignoring your intuition or allowing external noise to drown out your gut feelings. Hidden information or secrets might be causing confusion, or you may be withdrawing too far from reality into a world of shadows. It is a warning that you are missing the deeper meaning of a situation. You need to reconnect with your instincts and stop relying solely on others for the truth."
+      }
+    },
+    {
+      "name": "The Empress",
+      "number": "3",
+      "arcana": "Major Arcana",
+      "suit": null,
+      "img": "03-TheEmpress.png",
+      "upright": {
+        "keywords": ["Femininity", "Beauty", "Nature", "Nurturing", "Abundance"],
+        "meaning": "The Empress represents the fruitful mother of all things and the earthly paradise. Seated amidst ripening corn and falling water, she symbolizes universal fertility and the richness of the natural world. She is the gate through which life enters, offering a sense of safety and physical comfort. This card suggests a time of growth, luxury, and the successful manifestation of your desires. It encourages you to connect with your senses and embrace the abundance that surrounds you."
+      },
+      "reversed": {
+        "keywords": ["Creative Block", "Dependence on Others"],
+        "meaning": "When reversed, the Empress indicates that your creative energy or nurturing instincts are being stifled. You may feel disconnected from nature or overwhelmed by a lack of growth in your personal life. It can signal a period where you are relying too much on others for fulfillment instead of finding it within yourself. There may be a struggle with domestic harmony or a feeling that your efforts are not bearing fruit. It is a call to reclaim your independence and nourish your own spirit."
+      }
+    },
+    {
+      "name": "The Emperor",
+      "number": "4",
+      "arcana": "Major Arcana",
+      "suit": null,
+      "img": "04-TheEmperor.png",
+      "upright": {
+        "keywords": ["Authority", "Establishment", "Structure", "Father Figure"],
+        "meaning": "The Emperor is the figure of executive power and realization. He sits on a throne decorated with rams' heads, representing a stable and commanding presence in the material world. While the Empress represents nature, the Emperor represents the structure of thought and the rule of law. He is the provider of order and the protector of the realm. This card suggests that you are in a position to lead, organize, and bring stability to your environment through logic and discipline."
+      },
+      "reversed": {
+        "keywords": ["Domination", "Excessive Control", "Lack of Discipline", "Inflexibility"],
+        "meaning": "When reversed, the Emperor’s authority becomes rigid or oppressive. The power of leadership may turn into a desire for total control, leading to conflict with those around you. It can also indicate a lack of structure where discipline has failed, leaving things in chaos. You might be struggling with a figure who is too stubborn, or perhaps your own inflexibility is preventing progress. It is a sign to balance your drive for power with a more open and adaptable mindset."
+      }
+    },
+    {
+      "name": "The Hierophant",
+      "number": "5",
+      "arcana": "Major Arcana",
+      "suit": null,
+      "img": "05-TheHierophant.png",
+      "upright": {
+        "keywords": ["Spiritual Wisdom", "Religious Beliefs", "Conformity", "Tradition", "Institutions"],
+        "meaning": "The Hierophant represents the power of external religion and established tradition. Seated between two pillars, he serves as the bridge between organized doctrine and the community, symbolized by the two ministers kneeling before him. Unlike the High Priestess who guards inner secrets, he explains the visible and formal side of sacred life. This card suggests following a structured path, honoring cultural heritage, or seeking guidance from a trusted institution. It is a sign of grace found through order and shared ritual."
+      },
+      "reversed": {
+        "keywords": ["Personal Beliefs", "Freedom", "Challenging the Status Quo"],
+        "meaning": "When reversed, the Hierophant warns of rigid thinking and the misuse of authority. You may feel restricted by outdated traditions or find that established rules no longer align with your personal truth. It suggests a time to challenge the status quo and look for your own spiritual path outside of traditional institutions. Be wary of leaders who have forgotten their true purpose and act only for their own status. This is a call to favor personal experience over external dogma."
+      }
+    },
+    {
+      "name": "The Lovers",
+      "number": "6",
+      "arcana": "Major Arcana",
+      "suit": null,
+      "img": "06-TheLovers.png",
+      "upright": {
+        "keywords": ["Love", "Harmony", "Relationships", "Values Alignment", "Choices"],
+        "meaning": "The Lovers represents human love in its purest form, showing two figures standing innocent and unveiled under the sun. It is a card of harmony and the way of the heart, replacing older ideas of forced choice with the concept of a sacred bond. The presence of the Tree of Life and the Tree of Knowledge suggests that love is a path toward completing oneself. This card indicates a time of meaningful connection and the alignment of values, where a choice is made not out of material desire, but from a sense of truth and shared life."
+      },
+      "reversed": {
+        "keywords": ["Self-love", "Disharmony", "Imbalance", "Misalignment of Values"],
+        "meaning": "When reversed, the harmony of the Lovers is disrupted, often by an imbalance between the spirit and material desires. It suggests a misalignment of values or a lack of self-love that makes healthy connection with others difficult. You may be facing a conflict between your higher ideals and the 'sensitive life' or temporary attractions. This is a call to look inward and resolve internal friction before seeking completion through another. It warns against falling into the traps of superficiality or ignoring the secret laws that govern true partnership."
+      }
+    },
+    {
+      "name": "The Chariot",
+      "number": "7",
+      "arcana": "Major Arcana",
+      "suit": null,
+      "img": "07-TheChariot.png",
+      "upright": {
+        "keywords": ["Control", "Willpower", "Success", "Action", "Determination"],
+        "meaning": "The Chariot represents triumph through the mind and the power of logic. The charioteer is a victorious hero who has mastered the external world, progress, and science. By controlling the opposing sphinxes, he shows that success comes from directing your will toward a specific goal. This card signifies conquest on all visible planes, suggesting that you have the strength to overcome trials and lead yourself to victory through discipline and clear thinking."
+      },
+      "reversed": {
+        "keywords": ["Self-discipline", "Opposition", "Lack of Direction"],
+        "meaning": "When reversed, the Chariot warns that your victory may be hollow or limited to the surface. You might be winning the battle but losing your way, remaining in the 'bondage of logical understanding' while ignoring your spiritual needs. It suggests a lack of direction or an inability to answer deeper questions. You may be facing opposition because your control is forced rather than balanced. This is a sign to stop relying solely on external force and to check if your path actually leads to true liberation."
+      }
+    },
+    {
+      "name": "Strength",
+      "number": "8",
+      "arcana": "Major Arcana",
+      "suit": null,
+      "img": "08-Strength.png",
+      "upright": {
+        "keywords": ["Strength", "Courage", "Persuasion", "Influence", "Compassion"],
+        "meaning": "Strength represents the power of the higher nature over animal passion. A woman calmly closes the jaws of a lion, leading it with a simple chain of flowers. This shows that true fortitude comes from a gentle heart and spiritual contemplation rather than brute force. It is the strength found in inner peace and the 'sweet yoke' of a higher law. This card suggests that by staying calm and using compassion, you can subdue the most difficult challenges and master your own impulses."
+      },
+      "reversed": {
+        "keywords": ["Inner Strength", "Self-doubt", "Low Energy", "Raw Emotion"],
+        "meaning": "When reversed, the balance between your higher nature and your raw emotions is lost. You may feel overwhelmed by your passions or find yourself lacking the courage to face a situation. It suggests that your strength is being used for self-doubt instead of quiet confidence. Instead of leading with a 'chain of flowers,' you might be trying to force a result or letting fear take control. This is a sign to stop struggling against yourself and reconnect with the inner sanctuary of your spirit."
+      }
+    },
+    {
+      "name": "The Hermit",
+      "number": "9",
+      "arcana": "Major Arcana",
+      "suit": null,
+      "img": "09-TheHermit.png",
+      "upright": {
+        "keywords": ["Soul-searching", "Introspection", "Being Alone", "Inner Guidance"],
+        "meaning": "The Hermit is a card of attainment, representing the light of the world held high as a beacon. Standing on an eminence, he does not search for truth but embodies it, offering his light to show that others may also reach his height. This is not about hiding from the world, but about finding the divine mysteries that protect themselves from those who are unprepared. It suggests a time for deep reflection and following your own inner star to achieve spiritual clarity."
+      },
+      "reversed": {
+        "keywords": ["Isolation", "Loneliness", "Withdrawal"],
+        "meaning": "When reversed, the Hermit’s solitude can turn into unhealthy isolation or a refusal to share your light. You might be withdrawing into a 'silent philosophy' that keeps others out, rather than seeking genuine inner growth. It suggests that you are feeling lonely because you are disconnected from the truth that guides you. Instead of standing on an eminence to help others, you may be hiding your lantern. This is a sign to re-evaluate whether your time alone is helping you grow or simply cutting you off from the world."
+      }
+    },
+    {
+      "name": "Wheel of Fortune",
+      "number": "10",
+      "arcana": "Major Arcana",
+      "suit": null,
+      "img": "10-WheelOfFortune.png",
+      "upright": {
+        "keywords": ["Good Luck", "Karma", "Life Cycles", "Destiny", "Turning Point"],
+        "meaning": "The Wheel of Fortune represents the perpetual motion of the universe and the flux of human life. It shows that there is no such thing as random chance; instead, a divine providence moves through all cycles. The Sphinx at the top symbolizes stability and equilibrium amidst this constant movement. This card suggests you are at a turning point where the wheels are turning in your favor. It is a reminder that while life is always changing, there is an underlying order directing your destiny."
+      },
+      "reversed": {
+        "keywords": ["Bad Luck", "Resistance to Change", "Breaking Cycles"],
+        "meaning": "When reversed, the Wheel suggests a struggle with the natural flux of life. You may feel like a victim of 'fatality' or bad luck, failing to see the order within the chaos. It often indicates resistance to a necessary change or being stuck in a repetitive cycle that no longer serves you. Instead of finding equilibrium, you are being tossed about by the movement of the wheel. This is a sign to stop fighting the external shift and instead find the stable center within yourself to break the cycle."
+      }
+    },
+    {
+      "name": "Justice",
+      "number": "11",
+      "arcana": "Major Arcana",
+      "suit": null,
+      "img": "11-Justice.png",
+      "upright": {
+        "keywords": ["Justice", "Fairness", "Truth", "Cause and Effect", "Law"],
+        "meaning": "Justice represents the moral principle of cause and effect, where every person receives according to their works. Seated between pillars similar to those of the High Priestess, this figure governs the visible laws of fairness and truth in the world. It is the logical balance of action and consequence. This card suggests that a situation will be resolved fairly and that you must take responsibility for your choices, as the scales are currently being balanced in your favor."
+      },
+      "reversed": {
+        "keywords": ["Unfairness", "Lack of Accountability", "Dishonesty"],
+        "meaning": "When reversed, Justice indicates a lack of accountability or a situation where fairness is being ignored. You may feel that the outcome of a situation is dishonest or that you are being treated poorly without cause. It suggests a disconnect between your actions and their results, or perhaps an attempt to avoid the natural consequences of your behavior. This is a sign to examine where you have been unfair to yourself or others and to stop resisting the truth of the situation."
+      }
+    },
+    {
+      "name": "The Hanged Man",
+      "number": "12",
+      "arcana": "Major Arcana",
+      "suit": null,
+      "img": "12-TheHangedMan.png",
+      "upright": {
+        "keywords": ["Pause", "Surrender", "Letting Go", "New Perspectives"],
+        "meaning": "The Hanged Man represents life in suspension, but it is a state of life rather than death. The figure hangs from a living tree, his face showing a deep trance instead of suffering, with a halo of light around his head. This card suggests a willing sacrifice or a pause that leads to a higher awakening. It is about the relationship between the divine and the self, indicating that by letting go and surrendering to the moment, you can gain a new perspective that leads to a spiritual resurrection."
+      },
+      "reversed": {
+        "keywords": ["Delays", "Resistance", "Stalling", "Indecision"],
+        "meaning": "When reversed, the Hanged Man indicates a struggle against the necessity of pausing. You may be resisting a period of sacrifice or stalling a transition that is required for your growth. Instead of a 'sacred mystery,' you may feel stuck in a state of vanity or meaningless suffering. It suggests that you are trying to move forward when you should be reflecting, or that you are holding onto perspectives that no longer serve your higher nature. This is a sign to stop resisting and accept the temporary suspension."
+      }
+    },
+    {
+      "name": "Death",
+      "number": "13",
+      "arcana": "Major Arcana",
+      "suit": null,
+      "img": "13-Death.png",
+      "upright": {
+        "keywords": ["Endings", "Change", "Transformation", "Transition"],
+        "meaning": "Death represents the natural transit from one stage of being to the next. Rather than a simple ending, it is a transformation from a lower state to a higher one, symbolized by the sun of immortality shining between distant pillars. The horseman carries a black banner with a rose, showing that life and death are connected. This card suggests an inevitable passage that clears the way for spiritual ascent and renewal, marking a profound change in consciousness and the start of a new form of progress."
+      },
+      "reversed": {
+        "keywords": ["Resistance to Change", "Personal Transformation", "Inner Purging"],
+        "meaning": "When reversed, Death indicates a refusal to accept the natural cycle of endings and beginnings. You may be clinging to a 'mask of life' that has already passed, resisting a transformation that is necessary for your growth. It suggests that while the transition is happening, you are not allowing the old self to fall away, which prevents the sun of immortality from rising in your life. This is a sign to stop resisting the inevitable and to embrace the inner purging required for true rebirth."
+      }
+    },
+    {
+      "name": "Temperance",
+      "number": "14",
+      "arcana": "Major Arcana",
+      "suit": null,
+      "img": "14-Temperance.png",
+      "upright": {
+        "keywords": ["Balance", "Moderation", "Patience", "Purpose"],
+        "meaning": "Temperance represents the harmonious blending of the psychic and material natures. The figure, neither male nor female, pours the essences of life between two chalices while balancing one foot on earth and the other on water. This card illustrates the secret of eternal life found through moderation and the steady tempering of opposites. It suggests a time of finding your center, understanding your direction, and achieving a great light of clarity by aligning your physical actions with your spiritual purpose."
+      },
+      "reversed": {
+        "keywords": ["Imbalance", "Excess", "Self-healing", "Re-alignment"],
+        "meaning": "When reversed, the rule of harmony is broken, leading to a disconnect between your rational mind and your inner nature. You may be struggling with excess or failing to combine the different parts of your life effectively. Instead of a steady flow, the 'essences of life' are being wasted or mishandled. It indicates a period of imbalance where you have lost sight of 'whence you came and whither you are going.' This is a call for self-healing and re-aligning your psychic and material worlds to restore order."
+      }
+    },
+    {
+      "name": "The Devil",
+      "number": "15",
+      "arcana": "Major Arcana",
+      "suit": null,
+      "img": "15-TheDevil.png",
+      "upright": {
+        "keywords": ["Shadow Self", "Attachment", "Addiction", "Restriction", "Sexuality"],
+        "meaning": "The Devil represents the chain and fatality of material life. Standing on an altar with the inverted torch of destruction, he presides over the animal nature of humanity. The male and female figures are bound by chains, signifying a state of bondage to lower impulses and the 'forbidden fruit' of purely physical desire. This card suggests you are currently restricted by material attachments or a blind spot in your own intelligence. It is a reminder that while you may feel enslaved by your shadow self, this mastery is not permanent."
+      },
+      "reversed": {
+        "keywords": ["Releasing Limiting Beliefs", "Exploring Dark Thoughts", "Detachment"],
+        "meaning": "When reversed, the hold of the material world begins to loosen. You are starting to recognize that the Devil is also a bondsman, sustained only by the evil within. It indicates a period of detachment where you realize that the chains around your neck are loose enough to be removed. This is a time for releasing limiting beliefs and stepping away from the 'fatality' of your habits. By exploring your darker thoughts without being ruled by them, you find the liberty of service and the path back to the mystical garden."
+      }
+    },
+    {
+      "name": "The Tower",
+      "number": "16",
+      "arcana": "Major Arcana",
+      "suit": null,
+      "img": "16-TheTower.png",
+      "upright": {
+        "keywords": ["Sudden Change", "Upheaval", "Chaos", "Revelation", "Awakening"],
+        "meaning": "The Tower represents the sudden ruin of the 'House of Falsehood' and the destruction of structures built on weak or evil foundations. It is the intellectual counterpart to the Devil's material bondage, signifying the downfall of pride and the rending of false doctrines. This catastrophe serves as a harsh but necessary awakening, proving that any house built without a divine foundation must eventually fall. It marks the end of an old way of thinking and the literal voiding of a word that no longer holds truth."
+      },
+      "reversed": {
+        "keywords": ["Personal Transformation", "Fear of Change", "Averting Disaster"],
+        "meaning": "When reversed, the Tower indicates a fear of the necessary destruction or an attempt to cling to a crumbling House of Doctrine. You may be trying to avert a disaster that is actually required for your spiritual progress, or you are undergoing a slow, painful internal upheaval rather than a sudden external shift. It suggests that while the walls of your mind are cracking, you are resisting the revelation that follows. This is a sign to stop laboring in vain to save a house of falsehood and to allow the old dispensation to end."
+      }
+    },
+    {
+      "name": "The Star",
+      "number": "17",
+      "arcana": "Major Arcana",
+      "suit": null,
+      "img": "17-TheStar.png",
+      "upright": {
+        "keywords": ["Hope", "Faith", "Purpose", "Renewal", "Spirituality"],
+        "meaning": "The Star represents Truth unveiled, appearing as a figure of eternal youth and beauty who pours the Water of Life upon both land and sea. Under a great radiant star, she communicates the gifts of the spirit and the substance of the heavens to the world below. This card signifies a time of supernal understanding and interior light, where the waters of the soul are nourished by a higher source. It is a sign of hope and immortality, suggesting that you are in harmony with the universe and receiving its natural influx of grace."
+      },
+      "reversed": {
+        "keywords": ["Lack of Faith", "Despair", "Self-trust", "Disconnection"],
+        "meaning": "When reversed, the Star indicates a disconnection from your interior light and a lack of faith in the 'Gifts of the Spirit.' You may feel as though the Waters of Life have stopped flowing, leading to a sense of despair or spiritual dryness. Instead of the glorious beauty of truth, you see only the 'tawdry explanations' of your situation, losing sight of the higher understanding that guides you. This is a call to stop relying on outward appearances and to trust that the great radiant star still shines, even if you have temporarily lost your way."
+      }
+    },
+    {
+      "name": "The Moon",
+      "number": "18",
+      "arcana": "Major Arcana",
+      "suit": null,
+      "img": "18-TheMoon.png",
+      "upright": {
+        "keywords": ["Illusion", "Fear", "Anxiety", "Subconscious", "Intuition"],
+        "meaning": "The Moon represents the life of the imagination when it is separated from the spirit. It shows a path into the unknown, lit only by reflected light, where the natural mind feels the presence of its deepest fears. This light illuminates your animal nature—the dog, the wolf, and the hidden tendencies that crawl from the abyss. It is a time of unrest and mystery, where you must use the 'dew of thought' to bring peace to your subconscious and face the nameless anxieties that strive to manifest in your life."
+      },
+      "reversed": {
+        "keywords": ["Release of Fear", "Repressed Emotion", "Inner Confusion"],
+        "meaning": "When reversed, the Moon suggests that the 'hideous tendencies' of the abyss are sinking back into the deeps. You are beginning to release the fears of the natural mind and find a calm that settles your animal nature. However, it can also indicate inner confusion if you refuse to face the unknown mystery beyond your intellectual light. The release of repressed emotions allows the mind to direct a calmer gaze at the world, signaling that the period of intense illusion is fading as you seek a more stable truth."
+      }
+    },
+    {
+      "name": "The Sun",
+      "number": "19",
+      "arcana": "Major Arcana",
+      "suit": null,
+      "img": "19-TheSun.png",
+      "upright": {
+        "keywords": ["Positivity", "Fun", "Warmth", "Success", "Vitality"],
+        "meaning": "The Sun represents the dawn of spiritual consciousness and the great light that guides humanity home. It shows a transit from the physical light of this world to a higher, more sacred clarity. The child on the white horse symbolizes a return to simplicity and wisdom, where the mind is renewed and the animal nature exists in perfect harmony. This card signifies a state of restored innocence and success, suggesting that you have moved beyond the 'walled garden' of your past into a journey of true aspiration and vitality."
+      },
+      "reversed": {
+        "keywords": ["Inner Child", "Feeling Down", "Overly Optimistic"],
+        "meaning": "When reversed, the Sun’s light is clouded by a disconnect from your inner simplicity. You may be struggling to find the 'journey home' because your consciousness remains trapped in the sensitive life of the manifest world. It suggests a time when you feel down because you have lost that sense of wisdom and innocence, or you are being overly optimistic without a foundation in spiritual truth. This is a call to renew your mind and reconnect with your inner child to restore the harmony between your spirit and your natural life."
+      }
+    },
+    {
+      "name": "Judgement",
+      "number": "20",
+      "arcana": "Major Arcana",
+      "suit": null,
+      "img": "20-Judgement.png",
+      "upright": {
+        "keywords": ["Judgement", "Rebirth", "Inner Calling", "Absolution"],
+        "meaning": "Judgement represents the completion of a great transformation in response to a higher summons. It is a card of eternal life where the inner spirit calls, and all parts of your nature rise in wonder and ecstasy to answer. This is not merely an external event but a change heard and felt from within. It suggests a moment of profound awakening and rebirth, where you are finally restored to your true self and ready to step into a new existence."
+      },
+      "reversed": {
+        "keywords": ["Self-doubt", "Inner Critic", "Ignoring the Call"],
+        "meaning": "When reversed, the summons of the spirit is being heard but ignored or drowned out by self-doubt. You may be resisting the process of transformation, keeping your lower nature buried in the 'tomb' rather than allowing it to rise and change. It suggests a delay in your spiritual accomplishment because you are looking with natural eyes rather than 'inward eyes.' This is a sign to stop listening to the inner critic and acknowledge the call that is trying to lead you toward a necessary rebirth."
+      }
+    },
+    {
+      "name": "The World",
+      "number": "21",
+      "arcana": "Major Arcana",
+      "suit": null,
+      "img": "21-TheWorld.png",
+      "upright": {
+        "keywords": ["Completion", "Integration", "Accomplishment", "Travel"],
+        "meaning": "The World represents the perfection and end of a cycle, symbolizing the soul in a state of divine vision. It is the rapture of understanding one’s place in the universe and reaching a state where everything is declared to be good. This card signifies the highest degree of natural perfection and the successful integration of all your experiences. It marks a moment of total accomplishment, where the law of manifestation has been fully carried out and you stand in the 'Crown of the Magi,' complete and restored."
+      },
+      "reversed": {
+        "keywords": ["Seeking Personal Closure", "Short-cuts", "Delays"],
+        "meaning": "When reversed, the sense of completion is delayed or feels imperfect. You may be seeking closure but find that you haven't yet reached the 'highest degree of natural perfection' required to move on. It suggests that you might be looking for short-cuts instead of allowing the law of manifestation to finish its work. Rather than experiencing the rapture of the universe, you feel a disconnect from the self-knowing spirit. This is a sign to stop rushing the end and to focus on the final steps of integration needed for true accomplishment."
+      }
+    },
+    {
+      "name": "Ace of Cups",
+      "number": "1",
+      "arcana": "Minor Arcana",
+      "suit": "Cups",
+      "img": "c01.png",
+      "upright": {
+        "keywords": ["Love", "New Relationships", "Compassion", "Creativity"],
+        "meaning": "The Ace of Cups represents the source of the true heart and spiritual nourishment. A hand holds a cup from which five streams of water flow into a lake filled with lilies, while a dove descends to place a wafer in the vessel. This card signifies an abundance of joy, contentment, and the beginning of a deep emotional or creative phase. It is the house of fertility and inner peace, suggesting that your cup is overflowing with new potential and the grace of a fulfilled spirit."
+      },
+      "reversed": {
+        "keywords": ["Self-love", "Intuition", "Repressed Emotions"],
+        "meaning": "When reversed, the stability of the heart is shaken, leading to what Waite calls the 'house of the false heart.' It indicates emotional instability or a sudden mutation in your feelings. Instead of an outward flow of love, the energy may be blocked or repressed, suggesting that your inner nourishment is currently lacking. This is a sign of inconsistency and emotional revolution, where you must address your internal state before the joy and abundance of the cup can return."
+      }
+    },
+    {
+      "name": "Two of Cups",
+      "number": "2",
+      "arcana": "Minor Arcana",
+      "suit": "Cups",
+      "img": "c02.png",
+      "upright": {
+        "keywords": ["Unified Love", "Partnership", "Mutual Attraction"],
+        "meaning": "The Two of Cups shows a youth and a maiden pledging their connection to one another. Above them, the Caduceus of Hermes and a lion's head signify a union that is both powerful and harmonious. This card represents affinity, friendship, and the concord between people. It suggests a bond that goes beyond simple nature, where mutual sympathy and shared passion create a sanctified relationship. It is the card of balanced partnership and deep emotional connection."
+      },
+      "reversed": {
+        "keywords": ["Self-love", "Break-ups", "Disharmony", "Distrust"],
+        "meaning": "When reversed, the harmony and union of the two figures are disrupted. The bond that previously sanctified the relationship may turn into disharmony or a lack of mutual trust. It indicates a period where the 'concord' between individuals is broken, leading to a loss of sympathy or a misalignment of desires. Instead of unified love, there is a sense of separation or an inability to find common ground with others, suggesting that the partnership is currently out of balance."
+      }
+    },
+    {
+      "name": "Three of Cups",
+      "number": "3",
+      "arcana": "Minor Arcana",
+      "suit": "Cups",
+      "img": "c03.png",
+      "upright": {
+        "keywords": ["Celebration", "Friendship", "Creativity", "Collaborations"],
+        "meaning": "The Three of Cups represents the happy conclusion of a matter in a state of plenty and merriment. Three maidens in a garden lift their cups to pledge one another, symbolizing victory, fulfillment, and shared joy. This card signifies a perfect issue to a situation, bringing solace and healing through social connection. it is a sign of success and the pleasure found when people come together to celebrate a mutual achievement or a period of abundance."
+      },
+      "reversed": {
+        "keywords": ["Independence", "Alone Time", "Hardcore Partying", "Three’s a Crowd"],
+        "meaning": "When reversed, the energy of the card moves toward the extremes of physical enjoyment and sensory pleasure. While it can still signify achievement and the end of a task, it often points to excess or a focus on the superficial side of celebration. It may suggest that a group dynamic has become overwhelming or that the 'merriment' has turned into a distraction. This is a sign to balance your social life with self-discipline, ensuring that the pursuit of pleasure does not lead to a loss of meaning."
+      }
+    },
+    {
+      "name": "Four of Cups",
+      "number": "4",
+      "arcana": "Minor Arcana",
+      "suit": "Cups",
+      "img": "c04.png",
+      "upright": {
+        "keywords": ["Meditation", "Contemplation", "Apathy", "Reevaluation"],
+        "meaning": "The Four of Cups depicts a young man seated under a tree, seemingly weary and disgusted with the world. He contemplates three cups on the grass but ignores a fourth being offered by a hand from a cloud. This card represents a state of satiety and imaginary vexations, as if the pleasures of life have lost their appeal. It signifies a moment of deep reevaluation where even a new, 'fairy gift' of consolation brings no immediate joy, suggesting a blend of past pleasure and current discontent."
+      },
+      "reversed": {
+        "keywords": ["Retreat", "Withdrawal", "Checking in for Alignment"],
+        "meaning": "When reversed, the stagnant energy of the card begins to break, making way for novelty and new relations. It indicates a shift away from inward-looking apathy toward the arrival of new instruction or a presage of change. Instead of focusing on what is missing or disappointing, you are starting to notice the world around you again. This is a sign that the period of withdrawal is ending, allowing you to align with fresh opportunities and different perspectives that were previously ignored."
+      }
+    },
+    {
+      "name": "Five of Cups",
+      "number": "5",
+      "arcana": "Minor Arcana",
+      "suit": "Cups",
+      "img": "c05.png",
+      "upright": {
+        "keywords": ["Regret", "Failure", "Disappointment", "Pessimism"],
+        "meaning": "The Five of Cups represents a sense of loss and disappointed expectations. A dark, cloaked figure gazes at three fallen cups, yet two others remain standing behind him. This card suggests that while something has been taken away, not all is lost. It can indicate an inheritance or a transmission of property that brings bitterness or frustration rather than joy. It is a reminder that even in moments of regret, there is still a path—represented by the bridge in the background—leading to a place of security if you choose to turn around."
+      },
+      "reversed": {
+        "keywords": ["Personal Setbacks", "Self-forgiveness", "Moving On"],
+        "meaning": "When reversed, the focus shifts from the loss itself to the arrival of news and the return of old connections. It signifies a time of alliances, affinity, and a renewal of family ties or ancestry. Instead of dwelling on the prone cups, you are moving toward a state of recovery and the possibility of new projects. However, it also warns against 'false projects' or misguided plans. This is a sign that the period of mourning is ending, allowing for a return to social life and a more hopeful outlook on your heritage and future."
+      }
+    },
+    {
+      "name": "Six of Cups",
+      "number": "6",
+      "arcana": "Minor Arcana",
+      "suit": "Cups",
+      "img": "c06.png",
+      "upright": {
+        "keywords": ["Revisiting the Past", "Childhood Memories", "Innocence", "Joy"],
+        "meaning": "The Six of Cups depicts children in an old garden with their cups filled with flowers, symbolizing a return to the past and the happiness found in memories. It represents a state of innocence and enjoyment derived from things that have long since vanished. This card suggests a time of looking back on childhood or simpler days, finding comfort in nostalgia. It can also point to a shift in environment where new knowledge is gained through the lens of past experiences."
+      },
+      "reversed": {
+        "keywords": ["Living in the Past", "Forgiveness", "Lacking Playfulness"],
+        "meaning": "When reversed, the focus shifts away from nostalgia toward the future and renewal. It indicates that which will come to pass presently, moving you beyond the memories of what used to be. While the upright card dwells on the past, the reversal suggests a forward-looking energy and a readiness for upcoming changes. This is a sign to stop clinging to vanished things and to prepare for a new stage of life that is just beginning to manifest."
+      }
+    },
+    {
+      "name": "Seven of Cups",
+      "number": "7",
+      "arcana": "Minor Arcana",
+      "suit": "Cups",
+      "img": "c07.png",
+      "upright": {
+        "keywords": ["Opportunities", "Choices", "Wishful Thinking", "Illusion"],
+        "meaning": "The Seven of Cups depicts strange chalices filled with visions of the fantastic spirit. These are images of reflection and imagination, like fairy favors seen in the glass of contemplation. While this card suggests a level of attainment in these mental realms, it warns that nothing permanent or substantial is present. It is a time of sentiment and dreams, where many paths may appear, but most are fleeting illusions that lack a solid foundation in reality."
+      },
+      "reversed": {
+        "keywords": ["Alignment", "Personal Values", "Overwhelmed by Choices"],
+        "meaning": "When reversed, the drifting images of the imagination begin to solidify into desire and will. The card shifts from idle dreaming to the formation of a concrete project or a specific determination. It suggests that you are moving past mere wishful thinking to focus your energy on a real objective. This is a sign to stop being overwhelmed by choice and to use your inner strength to turn a vague vision into a focused plan of action."
+      }
+    },
+    {
+      "name": "Eight of Cups",
+      "number": "8",
+      "arcana": "Minor Arcana",
+      "suit": "Cups",
+      "img": "c08.png",
+      "upright": {
+        "keywords": ["Disappointment", "Abandonment", "Withdrawal", "Escapism"],
+        "meaning": "The Eight of Cups shows a person walking away from the cups of his previous concerns, suggesting the decline of a matter that once seemed important. While it can imply timidity or modesty, it primarily signifies leaving behind an enterprise or undertaking that no longer provides fulfillment. This card suggests that something you valued is losing its significance, prompting a withdrawal. It is a sign that you are moving on from the past because you realize your current path has become of slight consequence."
+      },
+      "reversed": {
+        "keywords": ["Trying One More Time", "Indecision", "Aimless Drifting", "Walking Away"],
+        "meaning": "When reversed, the traditional meanings shift toward celebration and great joy. Instead of a dejected departure, it suggests feasting and happiness, as if the energy that was once withdrawing has returned in a positive form. However, it can also indicate a struggle with the decision to leave, leading to aimless drifting or staying in a situation that has already ended. This is a sign to evaluate whether you are truly finding new joy or simply hesitating to walk away from what is no longer needed."
+      }
+    },
+    {
+      "name": "Nine of Cups",
+      "number": "9",
+      "arcana": "Minor Arcana",
+      "suit": "Cups",
+      "img": "c09.png",
+      "upright": {
+        "keywords": ["Contentment", "Satisfaction", "Gratitude", "Wish Come True"],
+        "meaning": "The Nine of Cups shows a person who has feasted to their heart's content, sitting before a row of abundant cups that suggest a secure future. This card represents a state of concord and physical well-being. It signifies victory, success, and the personal satisfaction of having your desires met. While it highlights the material side of happiness, it also points to a deep sense of advantage and comfort, where you can finally rest and enjoy the fruits of your labor."
+      },
+      "reversed": {
+        "keywords": ["Inner Happiness", "Materialism", "Dissatisfaction", "Indulgence"],
+        "meaning": "When reversed, the focus on material success may lead to mistakes or imperfections. Although some interpretations link this position to truth and liberty, it often suggests a lack of genuine fulfillment despite outward abundance. It can indicate a period where your satisfaction is marred by errors or a failure to remain loyal to your values. This is a sign to look past physical indulgence and address the imperfections in your current situation to find a more authentic sense of freedom."
+      }
+    },
+    {
+      "name": "Ten of Cups",
+      "number": "10",
+      "arcana": "Minor Arcana",
+      "suit": "Cups",
+      "img": "c10.png",
+      "upright": {
+        "keywords": ["Divine Love", "Blissful Relationships", "Harmony", "Alignment"],
+        "meaning": "The Ten of Cups represents the perfection of human love and the repose of the entire heart. A husband and wife contemplate a rainbow of cups in ecstasy, while their children dance nearby in simple happiness. This card signifies a state of total contentment and peace within a home or community. It suggests that your relationships have reached a level of natural perfection and alignment, where your personal interests are well-guarded and your surroundings bring you a sense of belonging and joy."
+      },
+      "reversed": {
+        "keywords": ["Disconnection", "Misaligned Values", "Struggling Relationships"],
+        "meaning": "When reversed, the peace of the home is disturbed, leading to what is called the 'repose of the false heart.' The harmony of the rainbow fades, replaced by indignation, bitterness, or even violence within relationships. It suggests a disconnection from the people and places that should provide comfort. Instead of shared joy, there is a misalignment of values that disrupts the family or social circle. This is a sign that the emotional security you rely on is built on a hollow foundation and needs genuine restoration."
+      }
+    },
+    {
+      "name": "Page of Cups",
+      "number": "11",
+      "arcana": "Minor Arcana",
+      "suit": "Cups",
+      "img": "c11.png",
+      "upright": {
+        "keywords": ["Creative Opportunities", "Intuitive Messages", "Curiosity", "Possibility"],
+        "meaning": "The Page of Cups represents the mind’s thoughts taking physical form. He is a studious and intent youth who watches a fish rise from his cup, symbolizing the birth of new ideas. This card signifies news, messages, and a spirit of quiet reflection or meditation. It often points to a connection with a helpful young person or a period of careful application toward your goals. It suggests that by staying curious and thoughtful, you can turn your inner visions into reality."
+      },
+      "reversed": {
+        "keywords": ["New Ideas", "Doubting Intuition", "Creative Blocks", "Emotional Immaturity"],
+        "meaning": "When reversed, the Page’s intent nature can lean toward artifice and deception. While there may be a strong inclination or attachment to an idea, it might be rooted in taste rather than truth. It suggests a situation where seduction or clever masks are used to mislead. You may find yourself doubting your intuition or facing creative blocks caused by a lack of sincerity. This is a sign to be wary of shallow attractions and to look for any hidden motives in the messages you receive."
+      }
+    },
+    {
+      "name": "Knight of Cups",
+      "number": "12",
+      "arcana": "Minor Arcana",
+      "suit": "Cups",
+      "img": "c12.png",
+      "upright": {
+        "keywords": ["Creativity", "Romance", "Charm", "Imagination", "Beauty"],
+        "meaning": "The Knight of Cups is a graceful, quiet figure who represents the higher graces of the imagination. Unlike other knights, he is not warlike; he is a dreamer whose visions are filled with beauty and sensory images. This card often signifies an arrival or the approach of a messenger bringing an invitation or a proposition. It suggests a time of emotional advances and refined demeanor, where creativity and charm lead the way toward new opportunities."
+      },
+      "reversed": {
+        "keywords": ["Overactive Imagination", "Unrealistic", "Jealous", "Moody"],
+        "meaning": "When reversed, the Knight’s graceful nature shifts into trickery and subtlety. His dreams may become distorted by an overactive imagination, leading to artifice or even fraud. It suggests a situation where advances are not what they seem, or where someone is using charm to hide duplicity and swindling. This is a warning to look past a pleasant exterior to ensure you are not being misled by a person who relies on fraud and clever masks rather than truth."
+      }
+    },
+    {
+      "name": "Queen of Cups",
+      "number": "13",
+      "arcana": "Minor Arcana",
+      "suit": "Cups",
+      "img": "c13.png",
+      "upright": {
+        "keywords": ["Compassionate", "Caring", "Emotionally Stable", "Intuitive", "In Flow"],
+        "meaning": "The Queen of Cups is a beautiful and dreamy figure who sees visions within her golden vessel. She represents a loving intelligence where intuition and action work together, as her deeds feed her dreams. This card signifies an honest and devoted person—often a perfect spouse or mother—who offers wisdom and service. It is a sign of success, happiness, and virtue, suggesting a time when your emotional life is guided by both vision and a caring, practical spirit."
+      },
+      "reversed": {
+        "keywords": ["Inner Feelings", "Self-care", "Self-love", "Co-dependency"],
+        "meaning": "When reversed, the Queen’s nature becomes unreliable or perverse. While she may still appear distinguished, she is no longer to be trusted, as her gift of vision can turn into depravity or dishonor. It suggests a person who has become disconnected from her virtues or is acting out of vice. This card warns of potential betrayal or an emotional instability that leads to a lack of integrity. It is a sign to be cautious of those who seem devoted but may be hiding a manipulative or inconsistent heart."
+      }
+    },
+    {
+      "name": "King of Cups",
+      "number": "14",
+      "arcana": "Minor Arcana",
+      "suit": "Cups",
+      "img": "c14.png",
+      "upright": {
+        "keywords": ["Emotionally Balanced", "Compassionate", "Diplomatic"],
+        "meaning": "The King of Cups is a man of creative intelligence and responsibility, seated on a throne that floats upon the sea. He holds a scepter and a large cup, remaining steady even as a ship rides the waves and a dolphin leaps nearby. This card represents a person disposed to help others, often involved in law, divinity, or the arts. He signifies equity and a balanced mind, suggesting a state where professional skill and emotional maturity work together to provide support and fair judgment."
+      },
+      "reversed": {
+        "keywords": ["Self-compassion", "Inner Feelings", "Moodiness", "Emotionally Manipulative"],
+        "meaning": "When reversed, the King’s steady nature turns toward dishonesty and double-dealing. The responsible man becomes a figure of injustice or vice, using his intelligence for exaction and scandal. It suggests a loss of emotional integrity where 'roguery' and pillage replace fair judgment. This card warns of potential loss or an encounter with a person whose outward kindness hides a manipulative intent. It is a sign that the balance between emotion and duty has been lost to selfish or dishonest motives."
+      }
+    },
+    {
+      "name": "Ace of Swords",
+      "number": "1",
+      "arcana": "Minor Arcana",
+      "suit": "Swords",
+      "img": "s01.png",
+      "upright": {
+        "keywords": ["Breakthroughs", "New Ideas", "Mental Clarity", "Success"],
+        "meaning": "The Ace of Swords depicts a hand issuing from a cloud, grasping a sword topped with a crown. This is a card of immense power and the triumph of force in all its forms, whether in love or in hatred. It signifies an 'excessive degree' of everything—a total conquest or a significant breakthrough. The crown suggests a higher level of authority or spiritual realization, marking a moment where mental clarity and sheer willpower lead to a decisive victory or a powerful new beginning."
+      },
+      "reversed": {
+        "keywords": ["Inner Clarity", "Re-thinking an Idea", "Clouded Judgement"],
+        "meaning": "When reversed, the great force of the Ace remains, but the results tend toward the disastrous. The same intensity that brings triumph upright can lead to ruin or overwhelming multiplicity when the energy is misdirected. Interestingly, some interpretations link this reversal to conception and childbirth—the 'augmentation' of life. However, it serves as a primary warning that without clear direction, the sharp power of the sword may cut the wrong way, leading to chaos rather than conquest."
+      }
+    },
+    {
+      "name": "Two of Swords",
+      "number": "2",
+      "arcana": "Minor Arcana",
+      "suit": "Swords",
+      "img": "s02.png",
+      "upright": {
+        "keywords": ["Difficult Decisions", "Weighing Up Options", "An Impasse", "Avoidance"],
+        "meaning": "The Two of Swords shows a blindfolded figure balancing two heavy blades, representing a state of conformity and precarious equipoise. It signifies a period of 'concord in a state of arms,' where peace is maintained through balance and courage rather than resolution. While it can hint at intimacy or friendship, these are qualified by the inherent tension of the swords. It is a moment of suspended action and a desire for harmony, even if that harmony requires a temporary avoidance of the truth."
+      },
+      "reversed": {
+        "keywords": ["Indecision", "Confusion", "Information Overload", "Stalemate"],
+        "meaning": "When reversed, the delicate balance of the card shatters, revealing imposture, falsehood, and duplicity. The blindfold no longer suggests a search for internal balance, but rather a state of being misled or acting with disloyalty. It indicates a situation where the 'equipoise' was a mask for deceit. This is a sign to be wary of hidden agendas and the potential for betrayal, as the temporary peace of the upright position gives way to the chaotic and sharper edges of dishonesty."
+      }
+    },
+    {
+      "name": "Three of Swords",
+      "number": "3",
+      "arcana": "Minor Arcana",
+      "suit": "Swords",
+      "img": "s03.png",
+      "upright": {
+        "keywords": ["Heartbreak", "Emotional Pain", "Sorrow", "Grief", "Hurt"],
+        "meaning": "The Three of Swords is a stark image of three blades piercing a heart amidst rain and clouds. Its meaning is simple and obvious: it represents rupture, division, and the pain of absence. This card signifies a period of sorrow or the sting of a necessary removal. It is the experience of a heart being torn by external circumstances, leading to a state of grief or dispersion where things that were once whole are now separated by conflict or loss."
+      },
+      "reversed": {
+        "keywords": ["Negative Self-talk", "Releasing Pain", "Optimism", "Forgiveness"],
+        "meaning": "When reversed, the piercing pain turns inward, manifesting as mental alienation and confusion. It suggests a state of disorder and distraction where the mind is clouded by error or loss. Instead of a clean break, there is a lingering sense of mental chaos or a struggle with one's own thoughts. This is a sign to be wary of internal disorder and the potential for losing your way in a fog of suspicion or mental fatigue as you attempt to process the hurt."
+      }
+    },
+    {
+      "name": "Four of Swords",
+      "number": "4",
+      "arcana": "Minor Arcana",
+      "suit": "Swords",
+      "img": "s04.png",
+      "upright": {
+        "keywords": ["Rest", "Relaxation", "Meditation", "Contemplation", "Recuperation"],
+        "meaning": "The Four of Swords shows the effigy of a knight in prayer, lying at rest upon his tomb. It represents a necessary retreat into solitude and a state of hermit’s repose. This card signifies a period of vigilance through stillness, where you must withdraw from the world to find quiet strength. Whether it feels like a peaceful meditation or a forced exile, it is a time for the mind to recover in silence before the next challenge begins."
+      },
+      "reversed": {
+        "keywords": ["Exhaustion", "Burn-out", "Deep Contemplation", "Stagnation"],
+        "meaning": "When reversed, the focus shifts from total rest to the practical management of one’s affairs. It indicates a need for wise administration, circumspection, and economy. While it can suggest caution and precaution, it may also lean toward avarice or a fixation on one's 'testament' and legacy. It is a sign to carefully organize your resources and act with prudence, ensuring that your return from solitude is handled with a clear, calculated plan."
+      }
+    },
+    {
+      "name": "Five of Swords",
+      "number": "5",
+      "arcana": "Minor Arcana",
+      "suit": "Swords",
+      "img": "s05.png",
+      "upright": {
+        "keywords": ["Conflict", "Disagreements", "Competition", "Defeat", "Winning at all costs"],
+        "meaning": "The Five of Swords depicts a man in possession of the field, watching his defeated opponents retreat in dejection. He has seized their weapons, representing a victory that comes with a heavy price. This card signifies degradation, dishonor, and the loss of one's standing. It is a state of destruction or the revocation of previous gains, suggesting that while you may have won the battle, the result is tainted by infamy and the resentment of those you have overcome."
+      },
+      "reversed": {
+        "keywords": ["Reconciliation", "Making Amends", "Past Resentment"],
+        "meaning": "When reversed, the sense of loss and dishonor remains much the same, but with a deeper focus on finality. It indicates a period of mourning or the symbolic 'burial' of a conflict. While it can hint at the end of a painful struggle, it often points to the lingering spirit of defeat or the formal rites of an ending, such as obsequies. This is a sign that the destruction is complete, and you must now face the solemn reality of what has been lost or discarded."
+      }
+    },
+    {
+      "name": "Six of Swords",
+      "number": "6",
+      "arcana": "Minor Arcana",
+      "suit": "Swords",
+      "img": "s06.png",
+      "upright": {
+        "keywords": ["Transition", "Change", "Rite of Passage", "Releasing Baggage"],
+        "meaning": "The Six of Swords shows a ferryman quietly punting passengers across smooth waters toward a distant shore. It represents a journey, a specific route, or a way forward that is well within your strength to manage. This card signifies a necessary transition or an expedient move to a better environment. It is the role of the envoy or commissionary, suggesting that while you are moving away from the past, the path ahead is clear and the work required for this change is manageable."
+      },
+      "reversed": {
+        "keywords": ["Personal Transition", "Resistance to Change", "Unfinished Business"],
+        "meaning": "When reversed, the quiet journey of the mind or body is interrupted by the need for public expression. It indicates a moment of declaration or confession, where things previously hidden or private are brought into the light. Rather than a smooth passage, there is a sense of publicity that can change the nature of your transition. Interestingly, some interpretations see this as a sudden proposal of love or a revelation that forces you to pause your journey and address the immediate situation."
+      }
+    },
+    {
+      "name": "Seven of Swords",
+      "number": "7",
+      "arcana": "Minor Arcana",
+      "suit": "Swords",
+      "img": "s07.png",
+      "upright": {
+        "keywords": ["Betrayal", "Deception", "Acting Strategically", "Getting Away With Something"],
+        "meaning": "The Seven of Swords shows a man quickly carrying away five swords from a nearby camp, leaving two behind. This card represents a state of design, where one attempts to fulfill a wish or hope through a specific plan. It signifies confidence and intent, but carries the risk of a plan that may fail, leading to quarreling or annoyance. It is a card of uncertain outcomes, suggesting a calculated risk or a strategic move that could either succeed through cleverness or result in frustration."
+      },
+      "reversed": {
+        "keywords": ["Imposter Syndrome", "Self-deceit", "Keeping Secrets"],
+        "meaning": "When reversed, the energy of the secret plan shifts toward the influence of others. It can indicate the arrival of good advice, counsel, or necessary instruction to correct your path. However, it also points to the more social risks of the mind—slander and idle babbling. It suggests that what was hidden may be exposed through talk, or that you are now in a position to listen to wise counsel rather than relying solely on your own potentially flawed designs."
+      }
+    },
+    {
+      "name": "Eight of Swords",
+      "number": "8",
+      "arcana": "Minor Arcana",
+      "suit": "Swords",
+      "img": "s08.png",
+      "upright": {
+        "keywords": ["Negative Thoughts", "Self-imposed Restriction", "Imprisonment", "Victim Mentality"],
+        "meaning": "The Eight of Swords shows a woman bound and blindfolded, surrounded by a barrier of blades. This card represents a state of 'power in trammels'—where your strength is restricted by external conflict or internal crisis. It signifies bad news, censure, and the pain of calumny or sickness. However, it is a card of temporary durance rather than permanent bondage, suggesting that while you feel trapped by violent chagrin or surrounding pressure, the situation is not irretrievable."
+      },
+      "reversed": {
+        "keywords": ["Self-limiting Beliefs", "Inner Critic", "Releasing Negative Thoughts", "Open to New Perspectives"],
+        "meaning": "When reversed, the sense of restriction shifts toward unforeseen difficulties and disquiet. It indicates a period of opposition or treachery that may catch you off guard, leading to accidents or unexpected fatalities in your plans. While the upright card deals with known pressures, the reversal points to what is hidden or unanticipated. It warns of lingering treachery and the need to remain alert to opposition that arises just as you attempt to move past your boundaries."
+      }
+    },
+    {
+      "name": "Nine of Swords",
+      "number": "9",
+      "arcana": "Minor Arcana",
+      "suit": "Swords",
+      "img": "s09.png",
+      "upright": {
+        "keywords": ["Anxiety", "Worry", "Fear", "Depression", "Nightmares"],
+        "meaning": "The Nine of Swords shows a figure in deep lamentation, seated on a couch with nine swords hanging above. It represents a state of utter desolation and a sorrow that feels unique and overwhelming. This card signifies despair, failure, and disappointment, often manifesting as mental anguish or the pain of deception and delay. It is a sign of being haunted by thoughts that offer no comfort, leading to a sense of total isolation in one's suffering."
+      },
+      "reversed": {
+        "keywords": ["Inner Turmoil", "Deep-seated Fears", "Secrets", "Releasing Worry"],
+        "meaning": "When reversed, the despair shifts toward a state of suspicion, doubt, and shame. While the intense desolation may be lifting, it is replaced by imprisonment—either physical or mental—and a sense of reasonable fear. It suggests a time when you are forced to face the secrets or doubts you have been hiding. Although it indicates a difficult period of uncertainty, it also suggests that the fears you feel are grounded in reality, calling for a careful and honest assessment of your situation."
+      }
+    },
+    {
+      "name": "Ten of Swords",
+      "number": "10",
+      "arcana": "Minor Arcana",
+      "suit": "Swords",
+      "img": "s10.png",
+      "upright": {
+        "keywords": ["Painful Endings", "Deep Wounds", "Betrayal", "Loss", "Crisis"],
+        "meaning": "The Ten of Swords depicts a prostrate figure pierced by ten weapons, representing the ultimate point of affliction and sadness. It signifies a state of desolation, pain, and tears where a situation has reached its absolute end. While it does not necessarily mean physical death, it marks a moment of total defeat or a crisis that cannot be ignored. It is the card of things falling apart, suggesting that the burden of the suit has finally reached its heavy and inevitable conclusion."
+      },
+      "reversed": {
+        "keywords": ["Recovery", "Regeneration", "Resisting an Inevitable End"],
+        "meaning": "When reversed, the card surprisingly shifts toward temporary advantage, profit, and success. It suggests a moment where you may find favor or regain a sense of power and authority, even after a period of great sadness. However, these gains are not permanent and may be fleeting. It indicates a stage of recovery where the worst has passed, though you must remain aware that the stability you feel is transitional and requires careful handling to maintain."
+      }
+    },
+    {
+      "name": "Page of Swords",
+      "number": "11",
+      "arcana": "Minor Arcana",
+      "suit": "Swords",
+      "img": "s11.png",
+      "upright": {
+        "keywords": ["New Ideas", "Curiosity", "Thirst for Knowledge", "New Ways of Communicating"],
+        "meaning": "The Page of Swords is an alert and active figure, walking swiftly across rugged land while holding his sword upright. He represents vigilance and the watchful eye of an overseer or a spy. This card signifies a state of sharp examination and readiness, suggesting that you are entering a period of secret service or intense observation. It is a sign of mental agility, where you must remain aware of your surroundings and be prepared to act with authority at any moment."
+      },
+      "reversed": {
+        "keywords": ["Self-expression", "All Talk and No Action", "Haphazard Action", "Haste"],
+        "meaning": "When reversed, the Page’s vigilance turns into a more malicious or unforeseen energy. It indicates an unprepared state where you may be caught off guard by events you did not anticipate. The card also intimates sickness or a lack of physical and mental readiness. Instead of careful examination, there is a sense of haste and haphazard action that leads to complications. This is a warning that you are currently vulnerable to the unexpected and should take time to strengthen your defenses."
+      }
+    },
+    {
+      "name": "Knight of Swords",
+      "number": "12",
+      "arcana": "Minor Arcana",
+      "suit": "Swords",
+      "img": "s12.png",
+      "upright": {
+        "keywords": ["Ambitious", "Action-oriented", "Driven to Succeed", "Fast-thinking"],
+        "meaning": "The Knight of Swords rides at full speed, scattering enemies like a hero of romantic chivalry. He represents swift action, bravery, and the capacity to overcome opposition. This card signifies a powerful drive to succeed through skill and resistance against enemies. It is the energy of war and defense, suggesting a time of intense activity where your capacity for destruction or creation is at its peak. It marks a moment of total commitment to a cause, driven by a sharp and sure mind."
+      },
+      "reversed": {
+        "keywords": ["Restless", "Unfocused", "Impulsive", "Burn-out"],
+        "meaning": "When reversed, the Knight’s swiftness turns into imprudence and extravagance. The bravery of the hero becomes a sign of incapacity, where energy is wasted on ill-conceived actions. It suggests a state of restlessness where you are moving too fast without the necessary skill to handle the obstacles in your way. Instead of a successful charge, this card warns of ruin caused by a lack of focus or an impulsive nature that ignores the reality of the situation."
+      }
+    },
+    {
+      "name": "Queen of Swords",
+      "number": "13",
+      "arcana": "Minor Arcana",
+      "suit": "Swords",
+      "img": "s13.png",
+      "upright": {
+        "keywords": ["Independent", "Unbiased Judgement", "Clear Boundaries", "Direct Communication"],
+        "meaning": "The Queen of Swords sits with a severe but chastened countenance, suggesting a deep familiarity with sorrow. She holds her sword vertically, representing a mind sharpened by life’s difficulties. This card often signifies a period of widowhood, sadness, or separation, where one must navigate privation and absence. While she lacks the warmth of mercy, she possesses a keen, direct intelligence born from experience. It is a sign of facing hard truths and maintaining integrity during times of female embarrassment or mourning."
+      },
+      "reversed": {
+        "keywords": ["Overly-emotional", "Easily Influenced", "Bitchy", "Cold-hearted"],
+        "meaning": "When reversed, the Queen’s stern nature sours into malice and bigotry. Her clear judgment is replaced by artifice and deceit, leading to a state of prudery or harmful behavior. It suggests a person who uses their intelligence for ill-will or to create a baleful atmosphere. Instead of the quiet strength found in sorrow, there is a tendency toward narrow-mindedness and deception. This is a warning to watch for hidden agendas or a sharp tongue that seeks to cause dishonor rather than reveal the truth."
+      }
+    },
+    {
+      "name": "King of Swords",
+      "number": "14",
+      "arcana": "Minor Arcana",
+      "suit": "Swords",
+      "img": "s14.png",
+      "upright": {
+        "keywords": ["Mental Clarity", "Intellectual Power", "Authority", "Truth"],
+        "meaning": "The King of Swords sits in judgment, holding an unsheathed blade that represents the power of life and death. He embodies militant intelligence and the authority of the law. This card signifies power, command, and the virtues of justice as seen in his official capacity. It suggests a time to act with clear judgment and professional authority, using your intellect to navigate legal matters, offices of the crown, or any situation requiring decisive command."
+      },
+      "reversed": {
+        "keywords": ["Quiet Power", "Inner Truth", "Misuse of Power", "Manipulation"],
+        "meaning": "When reversed, the King’s authority turns toward cruelty and perversity. The sharp intellect once used for justice is now driven by evil intention and perfidy. It indicates a misuse of power or a person who acts with barbarity and a lack of moral restraint. This is a warning of potential betrayal or a situation where cold logic is used to harm others. It suggests that the 'power of life and death' is being handled without mercy or honest judgment."
+      }
+    },
+    {
+      "name": "Ace of Wands",
+      "number": "1",
+      "arcana": "Minor Arcana",
+      "suit": "Wands",
+      "img": "w01.png",
+      "upright": {
+        "keywords": ["Inspiration", "New Opportunities", "Growth", "Potential"],
+        "meaning": "The Ace of Wands shows a hand reaching from a cloud to grasp a strong, leafy wand. This card represents the very beginning of a new journey, acting as the source of creation and invention. it signifies the birth of an idea, a family, or an enterprise. It is a starting point filled with energy and power, often pointing toward a new source of money, fortune, or even an inheritance. It is the spark that sets everything else in motion."
+      },
+      "reversed": {
+        "keywords": ["Emerging Idea", "Lack of Direction", "Distractions", "Delays"],
+        "meaning": "When reversed, the strong energy of the wand begins to fade. It indicates a sense of ruin, decadence, or a fall from a high point. Instead of a clear success, you may experience a 'clouded joy'—a success that doesn't feel quite right or is dampened by trouble. It is a sign of perishing efforts or plans that are losing their life. The growth seen in the upright card is replaced by a period where things may break down or lose their original purpose."
+      }
+    },
+    {
+      "name": "Two of Wands",
+      "number": "2",
+      "arcana": "Minor Arcana",
+      "suit": "Wands",
+      "img": "w02.png",
+      "upright": {
+        "keywords": ["Future Planning", "Progress", "Decisions", "Discovery"],
+        "meaning": "The Two of Wands shows a wealthy lord looking out from his roof over the sea and shore. He holds a globe in one hand, suggesting he owns much but feels a strange sadness or sickness amidst his riches. This card represents a mix of fortune and magnificence with personal sorrow or physical suffering. It reflects the heavy weight of success, where having everything can lead to a sense of mortification or a troubled mind while planning the next move."
+      },
+      "reversed": {
+        "keywords": ["Personal Goals", "Inner Alignment", "Fear of Unknown", "Lack of Planning"],
+        "meaning": "When reversed, the heavy mood of the lord shifts into sudden emotion. It brings a sense of surprise, wonder, and enchantment. However, this shift can also lead to trouble and fear. Instead of calmly overlooking a kingdom, you may feel overwhelmed by unexpected events that stir deep feelings. It is a sign that the stability of your plans is being interrupted by something that causes both amazement and anxiety."
+      }
+    },
+    {
+      "name": "Three of Wands",
+      "number": "3",
+      "arcana": "Minor Arcana",
+      "suit": "Wands",
+      "img": "w03.png",
+      "upright": {
+        "keywords": ["Progress", "Expansion", "Foresight", "Overseas Opportunities"],
+        "meaning": "The Three of Wands shows a calm, stately man looking out at ships from a cliff. These are his own ships carrying goods across the sea. The card represents established strength, trade, and discovery. It suggests successful enterprise and effort. This often means receiving help or cooperation from a powerful person in business who is ready to support your goals. It is a sign that your plans are moving forward and your reach is expanding."
+      },
+      "reversed": {
+        "keywords": ["Playing Small", "Lack of Foresight", "Unexpected Delays"],
+        "meaning": "When reversed, this card signals the end of a difficult period. It represents the stopping of trouble, disappointment, and hard toil. While the upright version focuses on looking ahead, the reversal shows a break from past adversity. The weight of your previous struggles is lifting, allowing for a rest from the constant effort. It is a moment where the pressure of a long-term problem finally begins to fade away."
+      }
+    },
+    {
+      "name": "Four of Wands",
+      "number": "4",
+      "arcana": "Minor Arcana",
+      "suit": "Wands",
+      "img": "w04.png",
+      "upright": {
+        "keywords": ["Celebration", "Joy", "Harmony", "Relaxation", "Homecoming"],
+        "meaning": "The Four of Wands shows four large staves connected by a garland, with two figures holding flowers. In the background, a bridge leads to a grand manor house. This card represents a haven of refuge and a peaceful country life. It signifies a time of harmony, prosperity, and domestic peace. It is the feeling of a successful harvest-home, where your hard work is perfected and you can finally enjoy a period of rest and concord with those around you."
+      },
+      "reversed": {
+        "keywords": ["Personal Celebration", "Inner Harmony", "Conflict with Others", "Transition"],
+        "meaning": "When reversed, the positive meaning of this card remains largely unchanged. It still points to prosperity, happiness, and beauty. You may experience growth, increase, or a focus on embellishing your life and surroundings. Even in this position, the card carries a strong sense of felicity. It suggests that the harmony and success of the upright position are still present, perhaps in a more personal or internal way that continues to bring joy."
+      }
+    },
+    {
+      "name": "Five of Wands",
+      "number": "5",
+      "arcana": "Minor Arcana",
+      "suit": "Wands",
+      "img": "w05.png",
+      "upright": {
+        "keywords": ["Conflict", "Disagreements", "Competition", "Tension", "Diversity"],
+        "meaning": "The Five of Wands shows a group of young men waving staves as if they are fighting or playing. It represents a 'sham fight' or mimic warfare. This card signifies the strenuous competition and struggle we face when searching for wealth and fortune. It is the 'battle of life' where everyone is pushing to get ahead. Because of this focus on competition, it can also point to gold, gain, and a path toward opulence through hard work and rivalry."
+      },
+      "reversed": {
+        "keywords": ["Inner Conflict", "Conflict Avoidance", "Tension Release"],
+        "meaning": "When reversed, the playful competition turns into more serious legal or personal trouble. It indicates litigation, disputes, and trickery. The energy shifts from an open struggle to one filled with contradictions and unfair play. Instead of a healthy challenge, you may find yourself dealing with people who use dishonest methods to win. This position warns of a breakdown in communication that leads to formal arguments or being misled by others."
+      }
+    },
+    {
+      "name": "Six of Wands",
+      "number": "6",
+      "arcana": "Minor Arcana",
+      "suit": "Wands",
+      "img": "w06.png",
+      "upright": {
+        "keywords": ["Success", "Public Recognition", "Progress", "Self-confidence"],
+        "meaning": "The Six of Wands shows a rider wearing a laurel wreath and carrying a staff with a crown. He is surrounded by people celebrating his return. This card represents a winner enjoying a public triumph. It signals that your hopes and desires are finally being realized. It can also mean receiving great news or an important message, like a royal courier bringing word of a victory. It is a sign that your hard work has led to the success you expected."
+      },
+      "reversed": {
+        "keywords": ["Private Achievement", "Fall from Grace", "Egotism"],
+        "meaning": "When reversed, the feeling of victory turns into fear and worry. You might feel like an enemy is at the gate or worry that someone will betray you by opening the doors to trouble. This position indicates disloyalty and a lack of trust in those around you. Instead of quick progress, you face indefinite delays. The public celebration is replaced by the apprehension that your success is being undermined or that your position is no longer secure."
+      }
+    },
+    {
+      "name": "Seven of Wands",
+      "number": "7",
+      "arcana": "Minor Arcana",
+      "suit": "Wands",
+      "img": "w07.png",
+      "upright": {
+        "keywords": ["Challenge", "Competition", "Protection", "Perseverance"],
+        "meaning": "The Seven of Wands shows a young man on a hill holding a staff, defending himself against six others from below. This is a card of courage and success because he holds the higher ground. It represents standing firm during a trade war, business competition, or a heated discussion. Since his enemies cannot easily reach him, it suggests that you have the advantage in your current struggle and can win if you keep your position."
+      },
+      "reversed": {
+        "keywords": ["Exhaustion", "Giving Up", "Overwhelmed"],
+        "meaning": "When reversed, the confidence of the high ground disappears. The card now signals a state of perplexity, embarrassment, and anxiety. You may feel confused by the pressure or struggle to make a choice. It serves as a specific warning against indecision. Instead of holding your own, you are likely to feel overwhelmed by the situation, suggesting that a lack of clear direction is making the challenge harder to manage."
+      }
+    },
+    {
+      "name": "Eight of Wands",
+      "number": "8",
+      "arcana": "Minor Arcana",
+      "suit": "Wands",
+      "img": "w08.png",
+      "upright": {
+        "keywords": ["Movement", "Fast Paced Change", "Action", "Alignment", "Air Travel"],
+        "meaning": "The Eight of Wands shows wands flying through the air across open country, nearing the end of their flight. This card represents swift activity and rapid progress in your projects. It signals great haste and hope, moving quickly toward a goal that promises happiness. Like a fast messenger, it shows that what you are waiting for is arriving soon or is already at your door. It can also represent the sudden 'arrows of love' or falling in love quickly."
+      },
+      "reversed": {
+        "keywords": ["Delays", "Frustration", "Resisting Change", "Internal Alignment"],
+        "meaning": "When reversed, the swift motion of the card turns into conflict. The 'arrows of love' become arrows of jealousy instead. It indicates internal disputes, feelings of guilt, and arguments. For those who are married, it often points to domestic quarrels and disagreements at home. The speed of the upright card is replaced by the stinging pain of social or personal discord, suggesting that progress is being ruined by petty fights or a troubled conscience."
+      }
+    },
+    {
+      "name": "Nine of Wands",
+      "number": "9",
+      "arcana": "Minor Arcana",
+      "suit": "Wands",
+      "img": "w09.png",
+      "upright": {
+        "keywords": ["Resilience", "Courage", "Persistence", "Test of Faith", "Boundaries"],
+        "meaning": "The Nine of Wands shows a man leaning on a staff, waiting for a potential enemy while others stand behind him like a fence. This card represents strength when facing opposition. It suggests you are ready to meet any attack boldly and can be a tough opponent. Along with this strength, the card also points to delays or things being put on hold while you stay on guard."
+      },
+      "reversed": {
+        "keywords": ["Inner Resources", "Struggle", "Overwhelmed", "Defensive", "Paranoia"],
+        "meaning": "When reversed, the defensive position fails to hold back trouble. It indicates a time of obstacles, adversity, and calamity. Instead of a successful defense, you face direct hardship that is difficult to overcome. This position suggests that the pressure has become too much, leading to a period of struggle where the environment feels hostile and the path forward is blocked."
+      }
+    },
+    {
+      "name": "Ten of Wands",
+      "number": "10",
+      "arcana": "Minor Arcana",
+      "suit": "Wands",
+      "img": "w10.png",
+      "upright": {
+        "keywords": ["Burden", "Extra Responsibility", "Hard Work", "Completion"],
+        "meaning": "The Ten of Wands shows a man struggling under the weight of ten heavy staves. This card primarily represents oppression, even the kind that comes from success, gain, or fortune. It suggests that while you may have achieved your goals, the resulting responsibilities are now a heavy load. It also warns of disguise or false appearances. If followed by negative cards, your success might feel empty or lead to direct losses in legal matters."
+      },
+      "reversed": {
+        "keywords": ["Doing It All", "Carrying the Burden", "Delegation", "Release"],
+        "meaning": "When reversed, the weight of the wands creates inner and outer conflict. This position indicates contrarieties, difficulties, and hidden intrigues. The simple pressure of the upright card turns into a more complex set of obstacles. Instead of just working hard, you may find yourself navigating social or professional traps. It is a sign that things are not moving smoothly and that you are facing a period of difficult complications."
+      }
+    },
+    {
+      "name": "Page of Wands",
+      "number": "11",
+      "arcana": "Minor Arcana",
+      "suit": "Wands",
+      "img": "w11.png",
+      "upright": {
+        "keywords": ["Inspiration", "Ideas", "Discovery", "Limitless Potential", "Free Spirit"],
+        "meaning": "The Page of Wands is a faithful young man making a proclamation. He acts as an envoy or messenger bringing strange but important news. This card represents a loyal person, a lover, or a postman delivering favorable testimony. It suggests a time of receiving family news or intelligence. He carries the core energy of his suit, showing an active and spirited approach to the messages he brings."
+      },
+      "reversed": {
+        "keywords": ["Newly-formed Ideas", "Redirecting Energy", "Self-limiting Beliefs", "A Spiritual Path"],
+        "meaning": "When reversed, the Page’s messages turn into gossip, anecdotes, or unpleasant announcements. The steady energy of the envoy becomes unstable, leading to indecision and a lack of focus. You may feel caught in a state of flux where the news you receive is unreliable or discouraging. This position warns of a wandering mind and the problems that come with being unprepared for the news at hand."
+      }
+    },
+    {
+      "name": "Knight of Wands",
+      "number": "12",
+      "arcana": "Minor Arcana",
+      "suit": "Wands",
+      "img": "w12.png",
+      "upright": {
+        "keywords": ["Energy", "Passion", "Inspired Action", "Adventure", "Impulsiveness"],
+        "meaning": "The Knight of Wands is a friendly young man on a journey. He passes by pyramids, moving with a sudden and fast energy. This card represents a departure or a change of residence. It signals a time of movement, absence, or even emigration. His actions are quick and driven by a desire for change, suggesting that things in your life are shifting rapidly from one place to another."
+      },
+      "reversed": {
+        "keywords": ["Passion Project", "Haste", "Scattered Energy", "Delays", "Frustration"],
+        "meaning": "When reversed, the Knight’s fast movement leads to a sudden stop. This position indicates a rupture or a division in your plans. The flow of energy is broken by discord and interruption. Instead of a smooth journey, you face a split in your path or a disagreement that halts progress. It is a sign that the haste of the upright card has resulted in a breakdown that requires attention before you can move again."
+      }
+    },
+    {
+      "name": "Queen of Wands",
+      "number": "13",
+      "arcana": "Minor Arcana",
+      "suit": "Wands",
+      "img": "w13.png",
+      "upright": {
+        "keywords": ["Courage", "Confidence", "Independence", "Social Butterfly", "Determination"],
+        "meaning": "The Queen of Wands is a friendly, honorable, and loving woman. She has a magnetic personality that draws people to her. This card represents a successful person who enjoys money and business. If she appears near a man, she is well-disposed toward him; near a woman, she shows a helpful interest in the seeker. She is a symbol of life and animation, showing a natural ability to balance social warmth with professional success."
+      },
+      "reversed": {
+        "keywords": ["Self-respect", "Self-confidence", "Introverted", "Re-establish Sense of Self"],
+        "meaning": "When reversed, this person is still good-hearted, economical, and helpful to others. However, the energy can shift toward more difficult traits like jealousy or opposition. In some cases, it suggests deceit or infidelity if surrounded by negative cards. It is a sign that the Queen's natural confidence has turned inward or become complicated by external friction. You may need to focus on being serviceable without letting these negative emotions take root."
+      }
+    },
+    {
+      "name": "King of Wands",
+      "number": "14",
+      "arcana": "Minor Arcana",
+      "suit": "Wands",
+      "img": "w14.png",
+      "upright": {
+        "keywords": ["Natural-born Leader", "Vision", "Entrepreneur", "Honour"],
+        "meaning": "The King of Wands is an honest and friendly man, often connected to the countryside. He sits on a throne decorated with lions, wearing a crown over a cap of maintenance. This card represents a noble and passionate nature. It signals a time of steady leadership and conscientious action. You can expect honesty in your dealings, and you might receive news about an unexpected inheritance arriving soon."
+      },
+      "reversed": {
+        "keywords": ["Impulsiveness", "Haste", "Ruthless", "High Expectations"],
+        "meaning": "When reversed, the King’s character becomes more severe. He remains a good person at heart but adopts a much more austere and demanding tone. He balances this strictness with a level of tolerance, yet his expectations are high. This position warns against moving too quickly or being overly harsh. It suggests that while the core intent is still positive, the method of leadership has become rigid and difficult to follow."
+      }
+    },
+    {
+      "name": "Ace of Pentacles",
+      "number": "1",
+      "arcana": "Minor Arcana",
+      "suit": "Pentacles",
+      "img": "p01.png",
+      "upright": {
+        "keywords": ["New Financial Opportunity", "Manifestation", "Abundance", "Career Opportunity"],
+        "meaning": "The Ace of Pentacles shows a hand emerging from a cloud, offering a golden pentacle. This card represents a state of perfect contentment, happiness, and even ecstasy. It is a sign of 'speedy intelligence' and the literal arrival of gold or wealth. It signals the best possible start for material ventures, promising a solid foundation of prosperity and a very comfortable life ahead."
+      },
+      "reversed": {
+        "keywords": ["Lost Opportunity", "Lack of Planning", "Foresight"],
+        "meaning": "When reversed, the card still indicates great riches and comfortable material conditions, but it warns of the 'evil side' of wealth. It represents 'bad intelligence' or poor judgment regarding money. While prosperity is still present, the reversal suggests that these riches might not actually benefit the owner or could lead to corruption. The focus shifts from pure happiness to the potential burdens or moral pitfalls of having too much."
+      }
+    },
+    {
+      "name": "Two of Pentacles",
+      "number": "2",
+      "arcana": "Minor Arcana",
+      "suit": "Pentacles",
+      "img": "p02.png",
+      "upright": {
+        "keywords": ["Multiple Priorities", "Time Management", "Prioritisation", "Adaptability"],
+        "meaning": "The Two of Pentacles shows a young man dancing while balancing two pentacles joined by a cord shaped like an infinity symbol. This card represents a time of recreation and gaiety. However, it also signals a period of agitation and movement. It can mean receiving news or messages in writing. You may be managing various obstacles or dealing with a busy, tangled situation that requires you to stay flexible and keep things in motion."
+      },
+      "reversed": {
+        "keywords": ["Over-committed", "Disorganisation", "Reprioritisation"],
+        "meaning": "When reversed, the playful energy becomes forced or fake. It represents simulated enjoyment or putting on a happy face when you don't feel it. In a more literal sense, it relates to the physical act of writing, such as handwriting, composition, or dealing with formal letters of exchange and business papers. It suggests that the balance is being lost, and the focus shifts to the technical or superficial side of communication."
+      }
+    },
+    {
+      "name": "Three of Pentacles",
+      "number": "3",
+      "arcana": "Minor Arcana",
+      "suit": "Pentacles",
+      "img": "p03.png",
+      "upright": {
+        "keywords": ["Teamwork", "Collaboration", "Learning", "Implementation"],
+        "meaning": "The Three of Pentacles shows a sculptor working in a monastery. Unlike the apprentice in the Eight of Pentacles, this person is now working in earnest. The card represents a person's trade, skilled labor, and professional path. It is often seen as a card of nobility, fame, and glory. It signals a time when your skills are recognized and you gain respect or renown through the high quality of your work and collaboration with others."
+      },
+      "reversed": {
+        "keywords": ["Disharmony", "Misalignment", "Working Alone"],
+        "meaning": "When reversed, the high quality of the work disappears. It indicates mediocrity and a lack of skill or effort. This position represents a childish or petty approach to tasks, leading to weakness and poor results. Instead of the glory seen in the upright card, you may find yourself stuck in uninspired or low-quality work. It is a sign that a lack of professional maturity or attention to detail is holding back your success."
+      }
+    },
+    {
+      "name": "Four of Pentacles",
+      "number": "4",
+      "arcana": "Minor Arcana",
+      "suit": "Pentacles",
+      "img": "p04.png",
+      "upright": {
+        "keywords": ["Saving Money", "Security", "Conservatism", "Scarcity", "Control"],
+        "meaning": "The Four of Pentacles shows a crowned man holding tightly to his possessions. He has one pentacle on his head, one in his arms, and two under his feet. This card represents the safety of what you own and a strong desire to keep what you have. It often signals receiving a gift, a legacy, or an inheritance. It is a sign of solid material security and the act of protecting your wealth to ensure long-term stability."
+      },
+      "reversed": {
+        "keywords": ["Over-spending", "Greed", "Self-protection"],
+        "meaning": "When reversed, the firm grip on possessions turns into a state of uncertainty. This position indicates suspense, delays, and direct opposition to your plans. Instead of feeling secure, you may face obstacles that block your progress or keep you in a state of waiting. It suggests that your attempts to control a situation are meeting resistance, leading to a period where things are stuck or held back by outside forces."
+      }
+    },
+    {
+      "name": "Five of Pentacles",
+      "number": "5",
+      "arcana": "Minor Arcana",
+      "suit": "Pentacles",
+      "img": "p05.png",
+      "upright": {
+        "keywords": ["Financial Loss", "Poverty", "Lack Mindset", "Isolation", "Worry"],
+        "meaning": "The Five of Pentacles shows two beggars walking through a snowstorm past a glowing window. This card primarily predicts material trouble and hardship, such as poverty or a loss of resources. Some see it as a card of close relationships—like a husband, wife, or friend—representing strong bonds formed during tough times. However, its most direct message is one of struggle and the physical or emotional strain that comes with a lack of security."
+      },
+      "reversed": {
+        "keywords": ["Recovery from Financial Loss", "Spiritual Poverty"],
+        "meaning": "When reversed, the hardship deepens into a state of total disorder and chaos. It indicates ruin, discord, and a life of waste or profligacy. The struggle seen in the upright card becomes a more permanent or messy situation where things fall apart completely. Instead of just facing a temporary lack, you may deal with the breakdown of systems or relationships, leading to a period of intense confusion and loss of control."
+      }
+    },
+    {
+      "name": "Six of Pentacles",
+      "number": "6",
+      "arcana": "Minor Arcana",
+      "suit": "Pentacles",
+      "img": "p06.png",
+      "upright": {
+        "keywords": ["Giving", "Receiving", "Sharing Wealth", "Generosity", "Charity"],
+        "meaning": "The Six of Pentacles shows a merchant using scales to weigh money, which he then gives to the poor. This image reflects both his personal success and his kind heart. The card represents receiving gifts, presents, or rewards for your efforts. It signals a time of prosperity and suggests that now is the right moment to act. It is a sign of being vigilant and attentive to the needs of others while enjoying your own stability."
+      },
+      "reversed": {
+        "keywords": ["Self-care", "Unpaid Debts", "One-sided Charity"],
+        "meaning": "When reversed, the spirit of giving is replaced by negative desires and envy. It indicates a state of jealousy or cupidity, where the focus is on wanting what others have. Instead of real prosperity, there is a sense of illusion or false appearances. You may find yourself dealing with people who are driven by greed rather than kindness. It is a warning to watch out for hidden motives and to avoid letting envy cloud your judgment."
+      }
+    },
+    {
+      "name": "Seven of Pentacles",
+      "number": "7",
+      "arcana": "Minor Arcana",
+      "suit": "Pentacles",
+      "img": "p07.png",
+      "upright": {
+        "keywords": ["Long-term View", "Sustainable Results", "Perseverance", "Investment"],
+        "meaning": "The Seven of Pentacles shows a young man leaning on his staff, looking closely at seven pentacles growing on a bush. He looks as if these are his treasures and his heart is set on them. This card primarily deals with business, money, and trade. While it can sometimes hint at minor quarrels, its core message is about assessing your gains. It represents a moment of pause to look at the results of your hard work and ingenuity."
+      },
+      "reversed": {
+        "keywords": ["Lack of Long-term Vision", "Limited Success", "Reward"],
+        "meaning": "When reversed, the focus on money becomes a source of worry. It specifically serves as a warning about lending money or making financial commitments that cause stress. The steady growth of the upright card is replaced by anxiety and financial uncertainty. It is a sign to be cautious with your resources, as a lack of planning or a risky deal could lead to a situation that makes you feel uneasy."
+      }
+    },
+    {
+      "name": "Eight of Pentacles",
+      "number": "8",
+      "arcana": "Minor Arcana",
+      "suit": "Pentacles",
+      "img": "p08.png",
+      "upright": {
+        "keywords": ["Apprenticeship", "Repetitive Tasks", "Mastery", "Skill Development"],
+        "meaning": "The Eight of Pentacles shows a craftsman at work, carving stone pentacles and displaying them like trophies. This card represents a focus on work, employment, and specific commissions. It signifies a time of developing your skill in business or a craft, often during the learning or preparatory stages. It is a sign of dedication to your trade and the steady effort required to reach true craftsmanship."
+      },
+      "reversed": {
+        "keywords": ["Self-development", "Perfectionism", "Misdirected Activity"],
+        "meaning": "When reversed, the worker’s focus shifts toward negative traits like vanity or greed. It indicates voided ambition or a mind that uses its skill for cunning and intrigue rather than honest labor. This position can also point to usury or being overly demanding in business. Instead of steady progress, it suggests that your ingenuity is being misdirected toward dishonest goals or that your efforts are failing to yield real results."
+      }
+    },
+    {
+      "name": "Nine of Pentacles",
+      "number": "9",
+      "arcana": "Minor Arcana",
+      "suit": "Pentacles",
+      "img": "p09.png",
+      "upright": {
+        "keywords": ["Abundance", "Luxury", "Self-sufficiency", "Financial Independence"],
+        "meaning": "The Nine of Pentacles shows a woman with a bird on her wrist in a garden full of grapes. She stands on a large estate that suggests plenty in all things. This card represents material well-being and having enough resources of your own. It is a sign of safety, success, and accomplishment. It also points to a time of prudence and clear discernment, where your choices have led to a certain and comfortable life."
+      },
+      "reversed": {
+        "keywords": ["Self-worth", "Over-investment in Work", "Hustling"],
+        "meaning": "When reversed, the security of the garden is threatened by dishonesty. This position indicates deception, bad faith, and roguery. Projects you have worked on may be cancelled or become empty. Instead of the certainty seen in the upright card, there is a sense of voided plans and broken trust. It serves as a warning that someone may be acting in bad faith, or that a lack of honesty is undermining your success."
+      }
+    },
+    {
+      "name": "Ten of Pentacles",
+      "number": "10",
+      "arcana": "Minor Arcana",
+      "suit": "Pentacles",
+      "img": "p10.png",
+      "upright": {
+        "keywords": ["Wealth", "Financial Security", "Family", "Long-term Success", "Contribution"],
+        "meaning": "The Ten of Pentacles shows a family scene under a stone archway, leading to a large estate. An older man sits in the front while a child and two dogs play nearby. This card represents total gain and riches. It is closely tied to family matters, including your home, family history, and the place where you live. It signals a time of lasting success where the wealth of a family is established and passed down through generations."
+      },
+      "reversed": {
+        "keywords": ["The Dark Side of Wealth", "Financial Failure", "Loss"],
+        "meaning": "When reversed, the stability of the family estate is threatened by risk. This position points to loss, robbery, or the dangers of gambling and games of chance. It indicates a sense of fatality or negative luck. However, it can also signify receiving a gift, a dowry, or a pension in an unexpected way. It serves as a warning that your security may be at risk due to outside forces or poor decisions involving money."
+      }
+    },
+    {
+      "name": "Page of Pentacles",
+      "number": "11",
+      "arcana": "Minor Arcana",
+      "suit": "Pentacles",
+      "img": "p11.png",
+      "upright": {
+        "keywords": ["Manifestation", "Financial Opportunity", "Skill Development"],
+        "meaning": "The Page of Pentacles shows a young person staring intently at a pentacle. He moves slowly, focusing entirely on the object in his hands and ignoring everything else around him. This card represents a time of study, scholarship, and deep reflection. It signals a period of application where you are focused on learning or managing a new task. It can also mean receiving messages or news, specifically regarding business or practical matters."
+      },
+      "reversed": {
+        "keywords": ["Lack of Progress", "Procrastination", "Learn from Failure"],
+        "meaning": "When reversed, the Page's focus turns into wastefulness and luxury. This position indicates prodigality and a tendency to spend or act without a plan. You may receive unfavorable news or find yourself distracted by the pursuit of pleasure. Instead of the steady study seen in the upright card, there is a sense of dissipation. It is a sign of instability and a warning that a lack of discipline is leading to poor results."
+      }
+    },
+    {
+      "name": "Knight of Pentacles",
+      "number": "12",
+      "arcana": "Minor Arcana",
+      "suit": "Pentacles",
+      "img": "p12.png",
+      "upright": {
+        "keywords": ["Hard Work", "Productivity", "Routine", "Conservatism"],
+        "meaning": "The Knight of Pentacles rides a slow, strong, and heavy horse. He carries his symbol but looks straight ahead rather than at it. This card represents practical utility and being of service. It signifies responsibility, honesty, and a focus on getting things done in the physical world. It is a sign of steady progress and a person who takes their duties seriously, preferring a reliable and direct path to success."
+      },
+      "reversed": {
+        "keywords": ["Self-discipline", "Boredom", "Feeling ‘Stuck’", "Perfectionism"],
+        "meaning": "When reversed, the Knight’s steady movement stops completely. This position signals inertia, idleness, and a type of stagnation that feels like a heavy rest. It can represent a state of being too placid or careless about important tasks. Instead of productive work, there is a sense of discouragement or a lack of drive. It is a warning that you may be stuck in a rut or simply too unmotivated to move forward."
+      }
+    },
+    {
+      "name": "Queen of Pentacles",
+      "number": "13",
+      "arcana": "Minor Arcana",
+      "suit": "Pentacles",
+      "img": "p13.png",
+      "upright": {
+        "keywords": ["Nurturing", "Practical", "Providing Financially", "Working Parent"],
+        "meaning": "The Queen of Pentacles is a woman with a great soul and a serious, intelligent mind. She looks at her symbol and sees deep meaning within it. This card represents a life of opulence, generosity, and magnificence. It signals a time of security and liberty, where you have the freedom and resources to care for yourself and others. She is a symbol of practical success combined with a kind and giving spirit."
+      },
+      "reversed": {
+        "keywords": ["Financial Independence", "Self-care", "Work-home Conflict"],
+        "meaning": "When reversed, the Queen’s security turns into suspicion and fear. The steady trust of the upright card is replaced by a sense of evil or mistrust. You may feel a state of suspense, as if waiting for something bad to happen. Instead of feeling free and generous, this position suggests you are held back by doubt. It is a warning to watch for dishonesty or to address the inner fears that are keeping you from feeling safe."
+      }
+    },
+    {
+      "name": "King of Pentacles",
+      "number": "14",
+      "arcana": "Minor Arcana",
+      "suit": "Pentacles",
+      "img": "p14.png",
+      "upright": {
+        "keywords": ["Wealth", "Business", "Leadership", "Security", "Discipline", "Abundance"],
+        "meaning": "The King of Pentacles is a man of courage with a dark, steady face, though he can be somewhat slow to move. His throne is decorated with bull heads, symbolizing his link to the earth and stability. This card represents a person with high business skill and practical intelligence. It signals success in math or technical fields and shows a natural ability to turn ideas into reality. It is a sign of steady growth and mastery over the physical world."
+      },
+      "reversed": {
+        "keywords": ["Financially Inept", "Obsessed with Wealth", "Stubborn"],
+        "meaning": "When reversed, the King’s strength turns into weakness and vice. His steady nature becomes lethargic or even corrupt. This position indicates peril and perversity, where the focus on success leads to ugly or dishonest behavior. Instead of a reliable leader, you face a situation filled with corruption or a person who uses their power for the wrong reasons. It is a warning that the path you are on may lead to a dangerous or dishonorable result."
+      }
+    }
+  ]
+}
