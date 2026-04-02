@@ -1,30 +1,21 @@
-# REPLACE WITH YOUR APP NAME
+# The Oracle
 
-This is the Final assessment template for CASA0014 - Please use this template and edit the relevant sections to personalise.
-This section has a short introduction to what the application is
+The Oracle is a mobile app designed to help with everyday decision-making. It offers simple, game-like tools to break the cycle of indecision and provide a path forward.
 
-## Use this README File 
+## Problem Statement
 
-Use this section to show us what your Mobile App is about.   Include a Screenshot to the App, link to the various frameworks you've used. Include your presentation video here that shows off your Mobile App.   Emojis are also fun to include 📱 😄
+We often face "choice paralysis" and "decision fatigue" in our daily lives. This app provides a low-stress, playful way to get unstuck and make decisions in the moment.
 
-Look at some other Flutter Apps online and see how they use there README File.  Good examples are:
+## App Vision
 
-- https://github.com/miickel/flutter_particle_clock
-- https://github.com/Tarikul711/flutter-food-delivery-app-ui    
-- https://github.com/mohak1283/Instagram-Clone
+The Oracle connects each random choice you make with your real-world environment, such as the weather, your location, and the time of day. It then visualizes these moments on a personal "Decision Map," creating a unique story of your journey.
 
+## Features
 
-## Include A Section That Tells Developers How To Install The App
-
-Include a section that gives intructions on how to install the app or run it in Flutter.  What versions of the plugins are you assuming?  Maybe define a licence
-
-##  Contact Details
-
-Having Contact Details is also good as it shows people how to get in contact with you if they'd like to contribute to the app. 
-
-# flutter_first_app
-
-A new Flutter project.
+*   **Decision Tools**: Use tools like a coin flip, a dice roll, or a tarot card draw to get instant answers.
+*   **Decision Map**: See a map of your past decisions, linked to the time, place, and context of each choice.
+*   **Tarot Codex**: Browse a full library of tarot cards to learn their meanings.
+*   **Personalized Experience**: The app adapts to your environment, making each decision feel unique.
 
 ## Getting Started
 
@@ -38,3 +29,7 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+## Contact
+
+If you'd like to contribute, please get in touch.

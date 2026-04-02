@@ -1,13 +1,15 @@
 import 'dart:math';
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/services.dart';
-import '../../../l10n/app_localizations.dart';
-import '../../../providers/tarot_provider.dart';
-import '../../../providers/history_provider.dart';
-import '../../../models/tarot_card.dart';
-import '../../../models/history_item.dart';
-import '../../../widgets/tarot_card_widget.dart';
+import 'package:the_oracle/l10n/app_localizations.dart';
+import 'package:the_oracle/providers/tarot_provider.dart';
+import 'package:the_oracle/providers/choice_provider.dart';
+import 'package:the_oracle/services/auth_service.dart';
+import 'package:the_oracle/models/tarot_card.dart';
+import 'package:the_oracle/widgets/tarot_card_widget.dart';
+import 'package:the_oracle/screens/oracle/oracle_display_screen.dart';
 
 class OracleRandomSingleDrawScreen extends StatefulWidget {
   const OracleRandomSingleDrawScreen({super.key});
@@ -17,6 +19,9 @@ class OracleRandomSingleDrawScreen extends StatefulWidget {
 }
 
 class _OracleRandomSingleDrawScreenState extends State<OracleRandomSingleDrawScreen> with SingleTickerProviderStateMixin {
+  static const goldColor = Color(0xFFD4AF37);
+  static const bgColor = Color(0xFF1A1221);
+
   TarotCard? _drawnCard;
   bool? _isReversed;
   bool _isFaceUp = false;
@@ -49,6 +54,9 @@ class _OracleRandomSingleDrawScreenState extends State<OracleRandomSingleDrawScr
       final random = Random();
       _drawnCard = provider.cards[random.nextInt(provider.cards.length)];
       _isReversed = random.nextBool();
+      _isFaceUp = false;
+      _hasFlippedOnce = false;
+      _hasSaved = false;
     });
   }
 
@@ -59,9 +67,6 @@ class _OracleRandomSingleDrawScreenState extends State<OracleRandomSingleDrawScr
         _isFaceUp = true;
         _hasFlippedOnce = true;
       });
-      if (!_hasSaved) {
-        _saveToHistory();
-      }
     } else {
       setState(() {
         _isFaceUp = !_isFaceUp;
@@ -69,14 +74,113 @@ class _OracleRandomSingleDrawScreenState extends State<OracleRandomSingleDrawScr
     }
   }
 
+  void _showSaveDialog() {
+    if (_drawnCard == null || _isReversed == null) return;
+
+    final l10n = AppLocalizations.of(context)!;
+    final questionController = TextEditingController();
+    final solutionController = TextEditingController();
+    String selectedMood = '🤔'; 
+    
+    String resultString = "${_drawnCard!.name} ${_isReversed! ? l10n.singleDrawReversed : ''}".trim();
+
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return StatefulBuilder(
+          builder: (context, setStateDialog) {
+            return AlertDialog(
+              title: Text(l10n.saveToMap),
+              content: SingleChildScrollView(
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(l10n.saveToMapResult(resultString)), 
+                    const SizedBox(height: 16),
+                    Text(l10n.saveToMapQuestionHint, style: Theme.of(context).textTheme.labelLarge),
+                    const SizedBox(height: 8),
+                    TextField(
+                      controller: questionController,
+                      decoration: const InputDecoration(
+                        hintText: "e.g., What should I focus on today?",
+                        border: OutlineInputBorder(),
+                      ),
+                    ),
+                    const SizedBox(height: 16),
+                    Text(l10n.saveToMapMood),
+                    DropdownButton<String>(
+                      value: selectedMood,
+                      isExpanded: true,
+                      items: <String>['😃', '😐', '😔', '🤔', '😎', '😠', '😭'].map((String value) {
+                        return DropdownMenuItem<String>(
+                          value: value,
+                          child: Text(value, style: const TextStyle(fontSize: 24)),
+                        );
+                      }).toList(),
+                      onChanged: (String? newValue) {
+                        if (newValue != null) {
+                          setStateDialog(() {
+                            selectedMood = newValue; 
+                          });
+                        }
+                      },
+                    ),
+                    const SizedBox(height: 16),
+                    Text(l10n.saveToMapSolutionHint, style: Theme.of(context).textTheme.labelLarge),
+                    const SizedBox(height: 8),
+                    TextField(
+                      controller: solutionController,
+                      decoration: const InputDecoration(
+                        hintText: "e.g., I will meditate for 10 minutes.",
+                        border: OutlineInputBorder(),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              actions: <Widget>[
+                TextButton(
+                  child: Text(l10n.cancel),
+                  onPressed: () => Navigator.of(context).pop(),
+                ),
+                ElevatedButton(
+                  child: Text(l10n.save),
+                  onPressed: () {
+                    final question = questionController.text.trim();
+                    final solution = solutionController.text.trim();
+                    
+                    context.read<ChoiceProvider>().addDecisionNode(
+                      tool: 'Tarot Draw',
+                      result: resultString,
+                      question: question,
+                      solution: solution,
+                      mood: selectedMood,
+                    );
+
+                    Navigator.of(context).pop();
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(content: Text(l10n.savedToMapSuccess)),
+                    );
+                    setState(() {
+                      _hasSaved = true;
+                    });
+                  },
+                ),
+              ],
+            );
+          }
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
-    const goldColor = Color(0xFFD4AF37);
-    const bgColor = Color(0xFF1A1221);
     final l10n = AppLocalizations.of(context)!;
 
     if (_drawnCard == null) {
-      return Scaffold(
+      return const Scaffold(
         backgroundColor: bgColor,
         body: Center(child: CircularProgressIndicator(color: goldColor)),
       );
@@ -84,7 +188,7 @@ class _OracleRandomSingleDrawScreenState extends State<OracleRandomSingleDrawScr
 
     return Scaffold(
       backgroundColor: bgColor,
-      appBar: _buildAppBar(context, goldColor, l10n),
+      appBar: _buildAppBar(context, l10n),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -115,93 +219,74 @@ class _OracleRandomSingleDrawScreenState extends State<OracleRandomSingleDrawScr
             ),
           ),
           const Spacer(),
-          SizedBox(
-            height: 180,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                if (!_hasFlippedOnce)
-                  Text(
-                    l10n.singleDrawTapToReveal,
-                    style: const TextStyle(color: Colors.white24, letterSpacing: 2, fontSize: 14),
-                  ),
-                const SizedBox(height: 5),
-                AnimatedOpacity(
-                  opacity: _hasFlippedOnce ? 1.0 : 0.0,
-                  duration: const Duration(milliseconds: 500),
-                  child: _hasFlippedOnce
-                      ? Column(
-                          children: [
-                            _buildBottomInfo(),
-                            ElevatedButton(
-                              onPressed: () => _showMeaningSheet(context, _drawnCard!, _isReversed!, l10n),
-                              style: ElevatedButton.styleFrom(
-                                backgroundColor: goldColor,
-                                foregroundColor: Colors.black,
-                                padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 15),
-                                shape: const StadiumBorder(),
-                                // elevation: 8,
-                                // shadowColor: goldColor.withAlpha(128),
-                              ),
-                              child: Text(
-                                l10n.singleDrawShowMeaning,
-                                style: const TextStyle(fontWeight: FontWeight.bold, letterSpacing: 1.2),
-                              ),
-                            ),
-                          ],
-                        )
-                      : const SizedBox.shrink(),
-                ),
-              ],
-            ),
+          AnimatedOpacity(
+            opacity: _hasFlippedOnce ? 1.0 : 0.0,
+            duration: const Duration(milliseconds: 500),
+            child: _hasFlippedOnce
+                ? Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        _buildBottomInfo(l10n),
+                        const SizedBox(height: 10),
+                        ElevatedButton(
+                          onPressed: () => _showMeaningSheet(context, _drawnCard!, _isReversed!, l10n),
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: goldColor,
+                            foregroundColor: Colors.black,
+                            padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 15),
+                            shape: const StadiumBorder(),
+                          ),
+                          child: Text(
+                            l10n.singleDrawShowMeaning,
+                            style: const TextStyle(fontWeight: FontWeight.bold, letterSpacing: 1.2),
+                          ),
+                        ),
+                      ],
+                    ),
+                  )
+                : const SizedBox.shrink(),
           ),
           const SizedBox(height: 70),
         ],
       ),
+      floatingActionButton: FloatingActionButton(
+        elevation: 0,
+        highlightElevation: 0,
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const OracleDisplayScreen()),
+          );
+        },
+        shape: const CircleBorder(),
+        backgroundColor: goldColor.withOpacity(0.8),
+        child: const Icon(
+          Icons.book_outlined,
+          color: Colors.white,
+        ),
+      ),
     );
   }
 
-  PreferredSizeWidget _buildAppBar(BuildContext context, Color goldColor, AppLocalizations l10n) {
+  PreferredSizeWidget _buildAppBar(BuildContext context, AppLocalizations l10n) {
     return AppBar(
-      title: Text(l10n.oraclePickDailyDraw, style: TextStyle(color: goldColor, letterSpacing: 1.5)),
+      title: Text(l10n.oraclePickDailyDraw, style: const TextStyle(color: goldColor, letterSpacing: 1.5)),
       centerTitle: true,
       backgroundColor: Colors.transparent,
       elevation: 0,
       leading: IconButton(
-        icon: const Icon(Icons.arrow_back_ios, color: Color(0xFFD4AF37)),
+        icon: const Icon(Icons.arrow_back_ios, color: goldColor),
         onPressed: () => Navigator.of(context).pop(),
       ),
       actions: [
-        AnimatedBuilder(
-          animation: _feedbackController,
-          builder: (context, child) {
-            double glowScale = 0.5 + (_feedbackController.value * 1.5);
-            double glowOpacity = (1.0 - _feedbackController.value).clamp(0.0, 0.6);
-            return Stack(
-              alignment: Alignment.center,
-              children: [
-                if (_feedbackController.isAnimating)
-                  Transform.scale(
-                    scale: glowScale,
-                    child: Container(
-                      width: 40,
-                      height: 40,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        gradient: RadialGradient(
-                          colors: [goldColor.withAlpha((glowOpacity * 255).toInt()), Colors.transparent],
-                        ),
-                      ),
-                    ),
-                  ),
-                IconButton(
-                  icon: Icon(Icons.history, color: _feedbackController.isAnimating ? Colors.white : goldColor),
-                  onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (_) => const OracleSingleCardHistoryScreen())),
-                )
-              ],
-            );
-          },
-        ),
+        if (_hasFlippedOnce && AuthService().currentUser != null)
+          IconButton(
+            icon: const Icon(Icons.bookmark_add_outlined, color: goldColor),
+            tooltip: l10n.saveToMap,
+            onPressed: _hasSaved ? null : _showSaveDialog,
+          ),
       ],
     );
   }
@@ -241,12 +326,15 @@ class _OracleRandomSingleDrawScreenState extends State<OracleRandomSingleDrawScr
                     ),
                     const SizedBox(height: 20),
                     Row(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          card.name,
-                          style: textTheme.headlineSmall?.copyWith(
-                            fontWeight: FontWeight.bold,
-                            color: colorScheme.onSurface,
+                        Expanded(
+                          child: Text(
+                            card.name,
+                            style: textTheme.headlineSmall?.copyWith(
+                              fontWeight: FontWeight.bold,
+                              color: colorScheme.onSurface,
+                            ),
                           ),
                         ),
                         if (isRev)
@@ -259,7 +347,7 @@ class _OracleRandomSingleDrawScreenState extends State<OracleRandomSingleDrawScr
                                 borderRadius: BorderRadius.circular(4),
                               ),
                               child: Text(
-                                l10n.readingSummaryReversedAbbr,
+                                l10n.singleDrawReversed,
                                 style: textTheme.labelSmall?.copyWith(
                                   color: colorScheme.error,
                                   fontWeight: FontWeight.bold,
@@ -304,13 +392,12 @@ class _OracleRandomSingleDrawScreenState extends State<OracleRandomSingleDrawScr
     );
   }
 
-  // 底部信息 (抽牌后 - 永久显示)
-  Widget _buildBottomInfo() {
+  Widget _buildBottomInfo(AppLocalizations l10n) {
     return Column(
       children: [
         Text(
           _drawnCard!.name.toUpperCase(),
-          style: const TextStyle(fontSize: 26, color: Color(0xFFD4AF37), fontWeight: FontWeight.bold),
+          style: const TextStyle(fontSize: 26, color: goldColor, fontWeight: FontWeight.bold),
         ),
         const SizedBox(height: 8),
         if (_isReversed == true)
@@ -320,38 +407,21 @@ class _OracleRandomSingleDrawScreenState extends State<OracleRandomSingleDrawScr
                 border: Border.all(color: Colors.redAccent.withAlpha(128)),
                 borderRadius: BorderRadius.circular(4)
             ),
-            child: const Text("REVERSED", style: TextStyle(color: Colors.redAccent, fontSize: 10, letterSpacing: 1.2)),
+            child: Text(l10n.singleDrawReversed, style: const TextStyle(color: Colors.redAccent, fontSize: 10, letterSpacing: 1.2)),
           ),
         const SizedBox(height: 10),
-        Text(
-          (_isReversed! ? _drawnCard!.reversedKeywords : _drawnCard!.uprightKeywords).join(" • "),
-          textAlign: TextAlign.center,
-          style: const TextStyle(color: Colors.white70, fontSize: 16),
+        SizedBox(
+          width: MediaQuery.of(context).size.width * 0.8,
+          child: Text(
+            (_isReversed! ? _drawnCard!.reversedKeywords : _drawnCard!.uprightKeywords).join(" • "),
+            textAlign: TextAlign.center,
+            style: const TextStyle(color: Colors.white70, fontSize: 16),
+            overflow: TextOverflow.ellipsis,
+            maxLines: 2,
+          ),
         ),
         const SizedBox(height: 20),
       ],
     );
-  }
-
-  void _saveToHistory() {
-    if (_drawnCard == null) return;
-    final l10n = AppLocalizations.of(context)!;
-    final newItem = HistoryItem(
-      id: DateTime.now().millisecondsSinceEpoch.toString(),
-      type: HistoryType.singleTarot,
-      timestamp: DateTime.now(),
-      payload: {
-        'name': _drawnCard!.name,
-        'img': _drawnCard!.img,
-        'isReversed': _isReversed,
-        'arcana': _drawnCard!.arcana,
-        'keywords': _isReversed! ? _drawnCard!.reversedKeywords : _drawnCard!.uprightKeywords,
-      },
-      question: l10n.oraclePickDailyDraw,
-      isFavorite: false,
-    );
-    context.read<HistoryProvider>().addRecord(newItem);
-    _feedbackController.forward(from: 0.0);
-    setState(() => _hasSaved = true);
   }
 }

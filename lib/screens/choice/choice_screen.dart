@@ -3,7 +3,7 @@ import 'package:the_oracle/l10n/app_localizations.dart';
 import 'package:the_oracle/screens/choice/coin_choice_screen.dart';
 import 'package:the_oracle/screens/choice/dice_choice_screen.dart';
 // import 'package:the_oracle/screens/choice/fortune_stick_screen.dart';
-import 'package:the_oracle/screens/oracle/oracle_pick_screen.dart';
+import 'package:the_oracle/screens/choice/tarot_choice_screen.dart';
 
 class ChoiceScreen extends StatelessWidget {
   const ChoiceScreen({super.key});
@@ -85,7 +85,7 @@ class ChoiceScreen extends StatelessWidget {
               label: l10n.bottomNavOracle,
               color: theme.colorScheme.surfaceVariant,
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const OraclePickScreen()));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const OracleRandomSingleDrawScreen()));
               },
             ),
           ],
