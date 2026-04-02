@@ -1,6 +1,6 @@
-# The Oracle
+# Oracle Map
 
-The Oracle is a mobile app designed to help with everyday decision-making. It offers simple, game-like tools to break the cycle of indecision and provide a path forward.
+Oracle Map is a mobile app designed to help with everyday decision-making. It offers simple, game-like tools to break the cycle of indecision and provide a path forward.
 
 ## Problem Statement
 
@@ -8,7 +8,7 @@ We often face "choice paralysis" and "decision fatigue" in our daily lives. This
 
 ## App Vision
 
-The Oracle connects each random choice you make with your real-world environment, such as the weather, your location, and the time of day. It then visualizes these moments on a personal "Decision Map," creating a unique story of your journey.
+Oracle Map connects each random choice you make with your real-world environment, such as the weather, your location, 和 the time of day. It then visualizes these moments on a personal "Decision Map," creating a unique story of your journey.
 
 ## Features
 
