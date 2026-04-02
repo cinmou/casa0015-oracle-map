@@ -17,8 +17,13 @@ class FortuneStickScreen extends StatefulWidget {
 }
 
 class _FortuneStickScreenState extends State<FortuneStickScreen> with SingleTickerProviderStateMixin {
+  late AnimationController _controller;
+  late Animation<double> _animation;
+
   FortuneStickResult? _currentResult;
   bool _hasResult = false;
+  static const goldColor = Color(0xFFD4AF37);
+  static const bgColor = Color(0xFF4E342E); // Deep wood color
 
   // Shake-related state variables
   bool _isShakeEnabled = false;
@@ -28,6 +33,12 @@ class _FortuneStickScreenState extends State<FortuneStickScreen> with SingleTick
   @override
   void initState() {
     super.initState();
+    _controller = AnimationController(
+      duration: const Duration(milliseconds: 800),
+      vsync: this,
+    );
+    _animation = CurvedAnimation(parent: _controller, curve: Curves.easeOutBack);
+
     _accelerometerSubscription = userAccelerometerEventStream().listen((UserAccelerometerEvent event) {
       if (!_isShakeEnabled) return;
       double acceleration = sqrt(event.x * event.x + event.y * event.y + event.z * event.z);
@@ -42,6 +53,7 @@ class _FortuneStickScreenState extends State<FortuneStickScreen> with SingleTick
   }
 
   void _drawStick() {
+    if (_controller.isAnimating) return;
     setState(() {
       _hasResult = false;
     });
@@ -51,8 +63,10 @@ class _FortuneStickScreenState extends State<FortuneStickScreen> with SingleTick
     _currentResult = FortuneStickResult.values[resultIndex];
 
     HapticFeedback.mediumImpact();
-    setState(() {
-      _hasResult = true;
+    _controller.forward(from: 0).then((_) {
+      setState(() {
+        _hasResult = true;
+      });
     });
   }
 
@@ -66,9 +80,9 @@ class _FortuneStickScreenState extends State<FortuneStickScreen> with SingleTick
     
     String resultString = '';
     switch(_currentResult) {
-      case FortuneStickResult.short: resultString = "Short Stick"; break; // TODO: Localize
-      case FortuneStickResult.medium: resultString = "Medium Stick"; break; // TODO: Localize
-      case FortuneStickResult.long: resultString = "Long Stick"; break; // TODO: Localize
+      case FortuneStickResult.short: resultString = l10n.fortuneStickShort; break;
+      case FortuneStickResult.medium: resultString = l10n.fortuneStickMedium; break;
+      case FortuneStickResult.long: resultString = l10n.fortuneStickLong; break;
       default: resultString = "Unknown";
     }
 
@@ -90,9 +104,9 @@ class _FortuneStickScreenState extends State<FortuneStickScreen> with SingleTick
                     const SizedBox(height: 8),
                     TextField(
                       controller: questionController,
-                      decoration: const InputDecoration(
-                        hintText: "e.g., Should I take this new opportunity?",
-                        border: OutlineInputBorder(),
+                      decoration: InputDecoration(
+                        // hintText: l10n.saveToMapQuestionExample,
+                        border: const OutlineInputBorder(),
                       ),
                     ),
                     const SizedBox(height: 16),
@@ -115,13 +129,13 @@ class _FortuneStickScreenState extends State<FortuneStickScreen> with SingleTick
                       },
                     ),
                     const SizedBox(height: 16),
-                    Text("My final decision is...", style: Theme.of(context).textTheme.labelLarge), // TODO: Add to l10n
+                    Text(l10n.saveToMapFinalDecision, style: Theme.of(context).textTheme.labelLarge),
                     const SizedBox(height: 8),
                     TextField(
                       controller: solutionController,
-                      decoration: const InputDecoration(
-                        hintText: "e.g., I will go for it!",
-                        border: OutlineInputBorder(),
+                      decoration: InputDecoration(
+                        // hintText: l10n.saveToMapSolutionExample,
+                        border: const OutlineInputBorder(),
                       ),
                     ),
                   ],
@@ -139,7 +153,7 @@ class _FortuneStickScreenState extends State<FortuneStickScreen> with SingleTick
                     final solution = solutionController.text.trim();
                     
                     context.read<ChoiceProvider>().addDecisionNode(
-                      tool: 'Fortune Stick', // TODO: Localize
+                      tool: l10n.fortuneToolName,
                       result: resultString,
                       question: question,
                       solution: solution, 
@@ -162,6 +176,7 @@ class _FortuneStickScreenState extends State<FortuneStickScreen> with SingleTick
 
   @override
   void dispose() {
+    _controller.dispose();
     _accelerometerSubscription?.cancel();
     super.dispose();
   }
@@ -170,12 +185,19 @@ class _FortuneStickScreenState extends State<FortuneStickScreen> with SingleTick
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
     return Scaffold(
+      backgroundColor: bgColor,
       appBar: AppBar(
-        title: Text("Fortune Stick"), // TODO: Localize
+        title: Text(l10n.quickPickFortuneSticks, style: const TextStyle(color: goldColor)), // Set title color to gold
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios, color: goldColor), // Set back button color to gold
+          onPressed: () => Navigator.of(context).pop(),
+        ),
         actions: [
           if (_hasResult)
             IconButton(
-              icon: const Icon(Icons.bookmark_add_outlined),
+              icon: const Icon(Icons.bookmark_add_outlined, color: goldColor),
               tooltip: l10n.saveToMap,
               onPressed: _showSaveDialog,
             ),
@@ -184,20 +206,34 @@ class _FortuneStickScreenState extends State<FortuneStickScreen> with SingleTick
       body: GestureDetector(
         behavior: HitTestBehavior.opaque,
         onTap: _drawStick,
-        child: Center(
+        child: SizedBox(
+          width: double.infinity,
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              _buildStickCylinder(),
               const SizedBox(height: 40),
-              if (_hasResult && _currentResult != null)
-                _buildDrawnStick(_currentResult!),
-              const SizedBox(height: 20),
+              SizedBox(
+                height: 550, // Provide enough space for the animation
+                child: Stack(
+                  alignment: Alignment.topCenter,
+                  clipBehavior: Clip.none,
+                  children: [
+                    _buildStickCylinder(),
+                    if (_currentResult != null)
+                      _buildAnimatedStick(),
+                  ],
+                ),
+              ),
+              const Spacer(),
+              if (_currentResult != null)
+                _buildAnimatedResultText(l10n),
+              const Spacer(),
               Text(
-                _hasResult ? _getStickResultText(l10n) : "Tap or shake to draw a stick", // TODO: Localize
-                style: Theme.of(context).textTheme.headlineSmall?.copyWith(color: Colors.white70),
+                _controller.isAnimating || _hasResult ? "" : l10n.fortuneStickTapToDraw,
+                style: Theme.of(context).textTheme.titleMedium?.copyWith(color: Colors.grey.shade400),
                 textAlign: TextAlign.center,
               ),
+              const SizedBox(height: 40),
             ],
           ),
         ),
@@ -224,13 +260,107 @@ class _FortuneStickScreenState extends State<FortuneStickScreen> with SingleTick
   }
 
   Widget _buildStickCylinder() {
+    return Positioned(
+      top: 0,
+      child: Container(
+        width: 150,
+        height: 220,
+        decoration: BoxDecoration(
+          color: Colors.brown.shade700,
+          borderRadius: BorderRadius.circular(15),
+          border: Border.all(color: Colors.brown.shade900, width: 4),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withOpacity(0.4),
+              spreadRadius: 3,
+              blurRadius: 8,
+              offset: const Offset(0, 4),
+            ),
+          ],
+        ),
+        child: Stack(
+          alignment: Alignment.topCenter,
+          clipBehavior: Clip.none,
+          children: [
+            // Sticks inside the cylinder
+            ...List.generate(7, (index) {
+              final rotation = (index - 3) * 0.1;
+              return Transform.rotate(
+                angle: rotation,
+                child: Container(
+                  width: 12,
+                  height: 180,
+                  margin: const EdgeInsets.only(top: 10),
+                  decoration: BoxDecoration(
+                    color: Colors.amber.shade200.withOpacity(0.6),
+                    borderRadius: BorderRadius.circular(3),
+                  ),
+                ),
+              );
+            }),
+            // Bottom rim
+            Align(
+              alignment: Alignment.bottomCenter,
+              child: Container(
+                width: 150,
+                height: 25,
+                decoration: BoxDecoration(
+                  color: Colors.brown.shade800,
+                  borderRadius: const BorderRadius.vertical(bottom: Radius.circular(12)),
+                  border: Border.all(color: Colors.brown.shade900, width: 3),
+                ),
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildAnimatedStick() {
+    return AnimatedBuilder(
+      animation: _animation,
+      builder: (context, child) {
+        return Positioned(
+          top: 170,
+          child: Transform.translate(
+            offset: Offset(0, 120 * _animation.value),
+            child: _buildDrawnStick(_currentResult!),
+          ),
+        );
+      },
+    );
+  }
+
+  Widget _buildAnimatedResultText(AppLocalizations l10n) {
+    return Opacity(
+      opacity: _animation.value.clamp(0.0, 1.0),
+      child: Text(
+        _getStickResultText(l10n),
+        style: Theme.of(context).textTheme.headlineMedium?.copyWith(
+          color: goldColor,
+          fontWeight: FontWeight.bold,
+        ),
+        textAlign: TextAlign.center,
+      ),
+    );
+  }
+
+  Widget _buildDrawnStick(FortuneStickResult result) {
+    double height;
+    switch (result) {
+      case FortuneStickResult.short: height = 150; break;
+      case FortuneStickResult.medium: height = 180; break;
+      case FortuneStickResult.long: height = 210; break;
+    }
+
     return Container(
-      width: 120,
-      height: 180,
+      width: 20,
+      height: height,
       decoration: BoxDecoration(
-        color: Colors.brown.shade700,
-        borderRadius: BorderRadius.circular(10),
-        border: Border.all(color: Colors.brown.shade900, width: 3),
+        color: Colors.amber.shade200,
+        borderRadius: BorderRadius.circular(5),
+        border: Border.all(color: Colors.amber.shade400, width: 2),
         boxShadow: [
           BoxShadow(
             color: Colors.black.withOpacity(0.3),
@@ -240,96 +370,15 @@ class _FortuneStickScreenState extends State<FortuneStickScreen> with SingleTick
           ),
         ],
       ),
-      child: Stack(
-        alignment: Alignment.bottomCenter,
-        children: [
-          // Sticks inside the cylinder
-          Positioned(
-            top: 10,
-            child: Column(
-              children: List.generate(5, (index) => Padding(
-                padding: const EdgeInsets.symmetric(vertical: 2.0),
-                child: Container(
-                  width: 80,
-                  height: 8,
-                  decoration: BoxDecoration(
-                    color: Colors.grey.shade300,
-                    borderRadius: BorderRadius.circular(2),
-                  ),
-                ),
-              )),
-            ),
-          ),
-          // Top rim
-          Container(
-            width: 120,
-            height: 20,
-            decoration: BoxDecoration(
-              color: Colors.brown.shade800,
-              borderRadius: const BorderRadius.vertical(top: Radius.circular(10)),
-              border: Border.all(color: Colors.brown.shade900, width: 2),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-
-  Widget _buildDrawnStick(FortuneStickResult result) {
-    double height;
-    String text;
-    final l10n = AppLocalizations.of(context)!;
-
-    switch (result) {
-      case FortuneStickResult.short:
-        height = 80;
-        text = "Short"; // TODO: Localize
-        break;
-      case FortuneStickResult.medium:
-        height = 100;
-        text = "Medium"; // TODO: Localize
-        break;
-      case FortuneStickResult.long:
-        height = 120;
-        text = "Long"; // TODO: Localize
-        break;
-    }
-
-    return Container(
-      width: 30,
-      height: height,
-      decoration: BoxDecoration(
-        color: Colors.amber.shade200,
-        borderRadius: BorderRadius.circular(5),
-        border: Border.all(color: Colors.amber.shade400, width: 2),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black.withOpacity(0.2),
-            spreadRadius: 1,
-            blurRadius: 3,
-            offset: const Offset(0, 2),
-          ),
-        ],
-      ),
-      child: Center(
-        child: Text(
-          text,
-          style: const TextStyle(
-            color: Colors.brown,
-            fontWeight: FontWeight.bold,
-            fontSize: 14,
-          ),
-        ),
-      ),
     );
   }
 
   String _getStickResultText(AppLocalizations l10n) {
     switch (_currentResult) {
-      case FortuneStickResult.short: return "You drew a Short Stick!"; // TODO: Localize
-      case FortuneStickResult.medium: return "You drew a Medium Stick!"; // TODO: Localize
-      case FortuneStickResult.long: return "You drew a Long Stick!"; // TODO: Localize
-      default: return "Draw a stick to see your fortune."; // TODO: Localize
+      case FortuneStickResult.short: return l10n.fortuneStickShort;
+      case FortuneStickResult.medium: return l10n.fortuneStickMedium;
+      case FortuneStickResult.long: return l10n.fortuneStickLong;
+      default: return "";
     }
   }
 }

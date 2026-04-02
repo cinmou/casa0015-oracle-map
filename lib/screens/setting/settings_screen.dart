@@ -80,7 +80,7 @@ class SettingsScreen extends StatelessWidget {
               onPressed: currentUser != null ? () {
                 Clipboard.setData(ClipboardData(text: currentUser.uid));
                 ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('User ID copied to clipboard!')), // TODO: Localize
+                  SnackBar(content: Text(l10n.settingsUserIdCopied)),
                 );
               } : null,
             ),

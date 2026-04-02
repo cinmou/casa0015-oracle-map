@@ -80,11 +80,13 @@
   },
   "saveToMapQuestionHint": "What was your question or dilemma?",
   "saveToMapMood": "How do you feel?",
+  "saveToMapFinalDecision": "My final decision is...",
   "saveToMapSolutionHint": "What did you decide to do?",
   "savedToMapSuccess": "Saved to your Decision Map!",
   "settingsDataManagement": "Data Management",
   "settingsYourUserId": "Your User ID",
   "settingsCopyId": "Copy ID",
+  "settingsUserIdCopied": "User ID copied to clipboard!",
   "settingsRestoreData": "Restore Data",
   "settingsRestoreDataTitle": "Restore Data from ID",
   "settingsRestoreDataWarning": "WARNING: This will delete all current data on this device and attempt to load data associated with the provided ID. This action cannot be undone for current data.",
@@ -96,5 +98,37 @@
   "settingsDeleteAccountWarning": "WARNING: This will permanently delete your account and all associated data. This action cannot be undone.",
   "settingsDeleteAccountConfirm": "Delete Account",
   "settingsDeleteAccountSuccess": "Account deleted. Restarting app...",
-  "settingsDeleteAccountError": "Failed to delete account. Please try again."
+  "settingsDeleteAccountError": "Failed to delete account. Please try again.",
+
+  "coinFlipTitle": "Coin Flip",
+  "coinFlipResultHeads": "It's Heads!",
+  "coinFlipResultTails": "It's Tails!",
+  "coinFlipResultEdge": "It landed on the Edge!",
+  "coinFlipTapToFlip": "Tap or shake to flip the coin",
+  "coinToolName": "Coin Flip",
+  "coinResultHeads": "Heads",
+  "coinResultTails": "Tails",
+  "coinResultEdge": "Edge",
+  "coinResultUnknown": "Unknown",
+
+  "diceRollTitle": "Dice Roll",
+  "diceRollResult": "You rolled a {result}",
+  "@diceRollResult": {
+    "placeholders": {
+      "result": {
+        "type": "String"
+      }
+    }
+  },
+  "diceRollTapToRoll": "Tap or shake to roll",
+  "diceToolName": "Dice Roll",
+
+  "fortuneStickTitle": "Fortune Stick",
+  "fortuneStickShort": "Short Stick",
+  "fortuneStickMedium": "Medium Stick",
+  "fortuneStickLong": "Long Stick",
+  "fortuneStickTapToDraw": "Tap or shake to draw a stick",
+  "fortuneToolName": "Fortune Stick",
+  "fortuneResultUnknown": "Unknown",
+  "myFinalDecision": "My final decision is..."
 }

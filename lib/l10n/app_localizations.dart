@@ -533,6 +533,12 @@ abstract class AppLocalizations {
   /// **'How do you feel?'**
   String get saveToMapMood;
 
+  /// No description provided for @saveToMapFinalDecision.
+  ///
+  /// In en, this message translates to:
+  /// **'My final decision is...'**
+  String get saveToMapFinalDecision;
+
   /// No description provided for @saveToMapSolutionHint.
   ///
   /// In en, this message translates to:
@@ -562,6 +568,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Copy ID'**
   String get settingsCopyId;
+
+  /// No description provided for @settingsUserIdCopied.
+  ///
+  /// In en, this message translates to:
+  /// **'User ID copied to clipboard!'**
+  String get settingsUserIdCopied;
 
   /// No description provided for @settingsRestoreData.
   ///
@@ -634,6 +646,138 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Failed to delete account. Please try again.'**
   String get settingsDeleteAccountError;
+
+  /// No description provided for @coinFlipTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Coin Flip'**
+  String get coinFlipTitle;
+
+  /// No description provided for @coinFlipResultHeads.
+  ///
+  /// In en, this message translates to:
+  /// **'It\'s Heads!'**
+  String get coinFlipResultHeads;
+
+  /// No description provided for @coinFlipResultTails.
+  ///
+  /// In en, this message translates to:
+  /// **'It\'s Tails!'**
+  String get coinFlipResultTails;
+
+  /// No description provided for @coinFlipResultEdge.
+  ///
+  /// In en, this message translates to:
+  /// **'It landed on the Edge!'**
+  String get coinFlipResultEdge;
+
+  /// No description provided for @coinFlipTapToFlip.
+  ///
+  /// In en, this message translates to:
+  /// **'Tap or shake to flip the coin'**
+  String get coinFlipTapToFlip;
+
+  /// No description provided for @coinToolName.
+  ///
+  /// In en, this message translates to:
+  /// **'Coin Flip'**
+  String get coinToolName;
+
+  /// No description provided for @coinResultHeads.
+  ///
+  /// In en, this message translates to:
+  /// **'Heads'**
+  String get coinResultHeads;
+
+  /// No description provided for @coinResultTails.
+  ///
+  /// In en, this message translates to:
+  /// **'Tails'**
+  String get coinResultTails;
+
+  /// No description provided for @coinResultEdge.
+  ///
+  /// In en, this message translates to:
+  /// **'Edge'**
+  String get coinResultEdge;
+
+  /// No description provided for @coinResultUnknown.
+  ///
+  /// In en, this message translates to:
+  /// **'Unknown'**
+  String get coinResultUnknown;
+
+  /// No description provided for @diceRollTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Dice Roll'**
+  String get diceRollTitle;
+
+  /// No description provided for @diceRollResult.
+  ///
+  /// In en, this message translates to:
+  /// **'You rolled a {result}'**
+  String diceRollResult(String result);
+
+  /// No description provided for @diceRollTapToRoll.
+  ///
+  /// In en, this message translates to:
+  /// **'Tap or shake to roll'**
+  String get diceRollTapToRoll;
+
+  /// No description provided for @diceToolName.
+  ///
+  /// In en, this message translates to:
+  /// **'Dice Roll'**
+  String get diceToolName;
+
+  /// No description provided for @fortuneStickTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Fortune Stick'**
+  String get fortuneStickTitle;
+
+  /// No description provided for @fortuneStickShort.
+  ///
+  /// In en, this message translates to:
+  /// **'Short Stick'**
+  String get fortuneStickShort;
+
+  /// No description provided for @fortuneStickMedium.
+  ///
+  /// In en, this message translates to:
+  /// **'Medium Stick'**
+  String get fortuneStickMedium;
+
+  /// No description provided for @fortuneStickLong.
+  ///
+  /// In en, this message translates to:
+  /// **'Long Stick'**
+  String get fortuneStickLong;
+
+  /// No description provided for @fortuneStickTapToDraw.
+  ///
+  /// In en, this message translates to:
+  /// **'Tap or shake to draw a stick'**
+  String get fortuneStickTapToDraw;
+
+  /// No description provided for @fortuneToolName.
+  ///
+  /// In en, this message translates to:
+  /// **'Fortune Stick'**
+  String get fortuneToolName;
+
+  /// No description provided for @fortuneResultUnknown.
+  ///
+  /// In en, this message translates to:
+  /// **'Unknown'**
+  String get fortuneResultUnknown;
+
+  /// No description provided for @myFinalDecision.
+  ///
+  /// In en, this message translates to:
+  /// **'My final decision is...'**
+  String get myFinalDecision;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

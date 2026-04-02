@@ -33,6 +33,7 @@
   "oraclePickClassicSpread": "经典牌阵",
   "tarotDisplayTitle": "塔罗牌",
   "tarotDisplaySelectCard": "选择塔罗牌",
+  "tarotDisplayNoData": "暂无数据",
   "tarotDisplayUprightMeaning": "正位释义",
   "tarotDisplayReversedMeaning": "逆位释义",
   "tarotDisplayKeywords": "关键词: {keywords}",
@@ -78,13 +79,17 @@
       }
     }
   },
-  "saveToMapQuestionHint": "你现在的困惑或问题是什么？",
+  "saveToMapQuestionHint": "你现在困惑或问题是什么？",
+  "saveToMapQuestionExample": "例如：我应该要求加薪吗？",
   "saveToMapMood": "你现在的心情？",
+  "saveToMapFinalDecision": "我最终的决定是...",
   "saveToMapSolutionHint": "你最终决定做什么？",
+  "saveToMapSolutionExample": "例如：是的，我会安排一次会议。",
   "savedToMapSuccess": "已成功收录至抉择地图！",
   "settingsDataManagement": "数据管理",
   "settingsYourUserId": "你的用户 ID",
   "settingsCopyId": "复制 ID",
+  "settingsUserIdCopied": "用户 ID 已复制到剪贴板！",
   "settingsRestoreData": "恢复数据",
   "settingsRestoreDataTitle": "从 ID 恢复数据",
   "settingsRestoreDataWarning": "警告：此操作将删除此设备上的所有当前数据，并尝试加载所提供 ID 的关联数据。此操作对当前数据不可撤销。",
@@ -96,5 +101,34 @@
   "settingsDeleteAccountWarning": "警告：此操作将永久删除您的账户及所有关联数据。此操作无法撤销。",
   "settingsDeleteAccountConfirm": "删除账户",
   "settingsDeleteAccountSuccess": "账户已删除。正在重启应用...",
-  "settingsDeleteAccountError": "无法删除账户。请稍后重试。"
+  "settingsDeleteAccountError": "无法删除账户。请稍后重试。",
+  "coinFlipTitle": "抛硬币",
+  "coinFlipResultHeads": "是正面！",
+  "coinFlipResultTails": "是反面！",
+  "coinFlipResultEdge": "硬币立起来了！",
+  "coinFlipTapToFlip": "点击或摇晃手机来抛硬币",
+  "coinToolName": "抛硬币",
+  "coinResultHeads": "正面",
+  "coinResultTails": "反面",
+  "coinResultEdge": "边缘",
+  "coinResultUnknown": "未知",
+  "diceRollTitle": "掷骰子",
+  "diceRollResult": "你掷出了 {result}",
+  "@diceRollResult": {
+    "placeholders": {
+      "result": {
+        "type": "String"
+      }
+    }
+  },
+  "diceRollTapToRoll": "点击或摇晃手机来掷骰子",
+  "diceToolName": "掷骰子",
+  "fortuneStickTitle": "求签",
+  "fortuneStickShort": "下签",
+  "fortuneStickMedium": "中签",
+  "fortuneStickLong": "上签",
+  "fortuneStickTapToDraw": "点击或摇晃手机来求签",
+  "fortuneToolName": "求签",
+  "fortuneResultUnknown": "未知",
+  "myFinalDecision": "我最终的决定是..."
 }

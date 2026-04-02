@@ -228,10 +228,13 @@ class AppLocalizationsZh extends AppLocalizations {
   }
 
   @override
-  String get saveToMapQuestionHint => '你现在的困惑或问题是什么？';
+  String get saveToMapQuestionHint => '你现在困惑或问题是什么？';
 
   @override
   String get saveToMapMood => '你现在的心情？';
+
+  @override
+  String get saveToMapFinalDecision => '我最终的决定是...';
 
   @override
   String get saveToMapSolutionHint => '你最终决定做什么？';
@@ -247,6 +250,9 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get settingsCopyId => '复制 ID';
+
+  @override
+  String get settingsUserIdCopied => '用户 ID 已复制到剪贴板！';
 
   @override
   String get settingsRestoreData => '恢复数据';
@@ -283,4 +289,72 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get settingsDeleteAccountError => '无法删除账户。请稍后重试。';
+
+  @override
+  String get coinFlipTitle => '抛硬币';
+
+  @override
+  String get coinFlipResultHeads => '是正面！';
+
+  @override
+  String get coinFlipResultTails => '是反面！';
+
+  @override
+  String get coinFlipResultEdge => '硬币立起来了！';
+
+  @override
+  String get coinFlipTapToFlip => '点击或摇晃手机来抛硬币';
+
+  @override
+  String get coinToolName => '抛硬币';
+
+  @override
+  String get coinResultHeads => '正面';
+
+  @override
+  String get coinResultTails => '反面';
+
+  @override
+  String get coinResultEdge => '边缘';
+
+  @override
+  String get coinResultUnknown => '未知';
+
+  @override
+  String get diceRollTitle => '掷骰子';
+
+  @override
+  String diceRollResult(String result) {
+    return '你掷出了 $result';
+  }
+
+  @override
+  String get diceRollTapToRoll => '点击或摇晃手机来掷骰子';
+
+  @override
+  String get diceToolName => '掷骰子';
+
+  @override
+  String get fortuneStickTitle => '求签';
+
+  @override
+  String get fortuneStickShort => '下签';
+
+  @override
+  String get fortuneStickMedium => '中签';
+
+  @override
+  String get fortuneStickLong => '上签';
+
+  @override
+  String get fortuneStickTapToDraw => '点击或摇晃手机来求签';
+
+  @override
+  String get fortuneToolName => '求签';
+
+  @override
+  String get fortuneResultUnknown => '未知';
+
+  @override
+  String get myFinalDecision => '我最终的决定是...';
 }

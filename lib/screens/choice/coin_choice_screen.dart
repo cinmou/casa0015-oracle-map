@@ -23,6 +23,7 @@ class _CoinFlipScreenState extends State<CoinFlipScreen> with SingleTickerProvid
 
   final double coinSize = 120.0;
   final double coinThickness = 12.0;
+  static const bgColor = Color(0xFF083B2A);
 
   // Shake-related state variables
   bool _isShakeEnabled = false;
@@ -61,7 +62,7 @@ class _CoinFlipScreenState extends State<CoinFlipScreen> with SingleTickerProvid
     });
   }
 
-  void _flipCoin() {
+  Future<void> _flipCoin() async {
     setState(() {
       _hasResult = false;
     });
@@ -83,9 +84,10 @@ class _CoinFlipScreenState extends State<CoinFlipScreen> with SingleTickerProvid
       end: endAngle,
     ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeInOutQuart));
 
-    HapticFeedback.heavyImpact();
-    _controller.forward(from: 0).then((_) {
-      HapticFeedback.mediumImpact();
+    await HapticFeedback.heavyImpact();
+
+    _controller.forward(from: 0).then((_) async {
+      await HapticFeedback.heavyImpact();
       setState(() {
         _hasResult = true;
       });
@@ -100,10 +102,10 @@ class _CoinFlipScreenState extends State<CoinFlipScreen> with SingleTickerProvid
     
     String resultString = '';
     switch(_currentResult) {
-      case CoinResult.heads: resultString = "Heads"; break;
-      case CoinResult.tails: resultString = "Tails"; break;
-      case CoinResult.edge: resultString = "Edge"; break;
-      default: resultString = "Unknown";
+      case CoinResult.heads: resultString = l10n.coinResultHeads; break;
+      case CoinResult.tails: resultString = l10n.coinResultTails; break;
+      case CoinResult.edge: resultString = l10n.coinResultEdge; break;
+      default: resultString = l10n.coinResultUnknown;
     }
 
     showDialog(
@@ -124,9 +126,9 @@ class _CoinFlipScreenState extends State<CoinFlipScreen> with SingleTickerProvid
                     const SizedBox(height: 8),
                     TextField(
                       controller: questionController,
-                      decoration: const InputDecoration(
-                        hintText: "e.g., Should I ask for a raise?",
-                        border: OutlineInputBorder(),
+                      decoration: InputDecoration(
+                        // hintText: l10n.saveToMapQuestionExample,
+                        border: const OutlineInputBorder(),
                       ),
                     ),
                     const SizedBox(height: 16),
@@ -149,13 +151,13 @@ class _CoinFlipScreenState extends State<CoinFlipScreen> with SingleTickerProvid
                       },
                     ),
                     const SizedBox(height: 16),
-                    Text("My final decision is...", style: Theme.of(context).textTheme.labelLarge), // TODO: Add to l10n
+                    Text(l10n.saveToMapFinalDecision, style: Theme.of(context).textTheme.labelLarge),
                     const SizedBox(height: 8),
                     TextField(
                       controller: solutionController,
-                      decoration: const InputDecoration(
-                        hintText: "e.g., Yes, I'll schedule a meeting.",
-                        border: OutlineInputBorder(),
+                      decoration: InputDecoration(
+                        // hintText: l10n.saveToMapSolutionExample,
+                        border: const OutlineInputBorder(),
                       ),
                     ),
                   ],
@@ -173,7 +175,7 @@ class _CoinFlipScreenState extends State<CoinFlipScreen> with SingleTickerProvid
                     final solution = solutionController.text.trim();
                     
                     context.read<ChoiceProvider>().addDecisionNode(
-                      tool: 'Coin Flip',
+                      tool: l10n.coinToolName,
                       result: resultString,
                       question: question,
                       solution: solution, 
@@ -205,12 +207,19 @@ class _CoinFlipScreenState extends State<CoinFlipScreen> with SingleTickerProvid
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
     return Scaffold(
+      backgroundColor: bgColor,
       appBar: AppBar(
-        title: Text(l10n.quickPickCoinFlip),
+        title: Text(l10n.quickPickCoinFlip, style: const TextStyle(color: Colors.white)),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
         actions: [
           if (_hasResult)
             IconButton(
-              icon: const Icon(Icons.bookmark_add_outlined),
+              icon: const Icon(Icons.bookmark_add_outlined, color: Colors.white),
               tooltip: l10n.saveToMap,
               onPressed: _showSaveDialog,
             ),
@@ -220,19 +229,36 @@ class _CoinFlipScreenState extends State<CoinFlipScreen> with SingleTickerProvid
         behavior: HitTestBehavior.opaque,
         onTap: _flipCoin,
         child: Center(
-          child: AnimatedBuilder(
-            animation: _controller,
-            builder: (context, child) {
-              final double rotation = _flipAnimation.value;
-              return Transform(
-                alignment: Alignment.center,
-                transform: Matrix4.identity()
-                  ..setEntry(3, 2, 0.001)
-                  ..scale(_heightAnimation.value)
-                  ..rotateX(rotation),
-                child: _build3DCoin(rotation),
-              );
-            },
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              AnimatedBuilder(
+                animation: _controller,
+                builder: (context, child) {
+                  final double rotation = _flipAnimation.value;
+                  return Transform(
+                    alignment: Alignment.center,
+                    transform: Matrix4.identity()
+                      ..setEntry(3, 2, 0.001)
+                      ..scale(_heightAnimation.value)
+                      ..rotateX(rotation),
+                    child: _build3DCoin(rotation),
+                  );
+                },
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 60.0),
+                child: AnimatedOpacity(
+                  opacity: _hasResult ? 1.0 : 0.0,
+                  duration: const Duration(milliseconds: 300),
+                  child: Text(
+                    _hasResult ? _getCoinResultText(l10n) : "",
+                    style: Theme.of(context).textTheme.headlineSmall?.copyWith(color: Colors.white),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
       ),
@@ -255,6 +281,15 @@ class _CoinFlipScreenState extends State<CoinFlipScreen> with SingleTickerProvid
         ),
       ),
     );
+  }
+
+  String _getCoinResultText(AppLocalizations l10n) {
+    switch (_currentResult) {
+      case CoinResult.heads: return l10n.coinResultHeads;
+      case CoinResult.tails: return l10n.coinResultTails;
+      case CoinResult.edge: return l10n.coinResultEdge;
+      default: return "";
+    }
   }
 
   Widget _build3DCoin(double rotation) {
@@ -288,7 +323,7 @@ class _CoinFlipScreenState extends State<CoinFlipScreen> with SingleTickerProvid
             ..rotateX(pi / 2)
             ..rotateZ(pi)
             ..rotateY(pi),
-          child: _buildEdgeBand(),
+          child: _buildEdgeBand(AppLocalizations.of(context)!),
         ),
       );
     }
@@ -324,13 +359,13 @@ class _CoinFlipScreenState extends State<CoinFlipScreen> with SingleTickerProvid
         child: Icon(
           isBack ? Icons.currency_pound : Icons.face,
           size: 60,
-          color: Colors.amber.shade100.withValues(alpha: 0.9),
+          color: Colors.amber.shade100.withOpacity(0.9),
         ),
       ),
     );
   }
 
-  Widget _buildEdgeBand() {
+  Widget _buildEdgeBand(AppLocalizations l10n) {
     return Container(
       width: coinSize,
       height: coinThickness,
@@ -340,10 +375,10 @@ class _CoinFlipScreenState extends State<CoinFlipScreen> with SingleTickerProvid
           colors: [Colors.amber.shade900, Colors.amber.shade700, Colors.amber.shade900],
         ),
       ),
-      child: const Center(
+      child: Center(
         child: Text(
-          "The Oracle 2026",
-          style: TextStyle(
+          "Oracle Map 2026",
+          style: const TextStyle(
             color: Colors.white60,
             fontSize: 9,
             fontWeight: FontWeight.bold,

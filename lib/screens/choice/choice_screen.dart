@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:the_oracle/l10n/app_localizations.dart';
 import 'package:the_oracle/screens/choice/coin_choice_screen.dart';
 import 'package:the_oracle/screens/choice/dice_choice_screen.dart';
-// import 'package:the_oracle/screens/choice/fortune_stick_screen.dart';
+import 'package:the_oracle/screens/choice/fortune_choice_screen.dart';
 import 'package:the_oracle/screens/choice/tarot_choice_screen.dart';
 
 class ChoiceScreen extends StatelessWidget {
@@ -76,7 +76,7 @@ class ChoiceScreen extends StatelessWidget {
               label: l10n.quickPickFortuneSticks,
               color: theme.colorScheme.tertiaryContainer,
               onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => const DiceRollScreen()));
+                Navigator.push(context, MaterialPageRoute(builder: (context) => const FortuneStickScreen()));
               },
             ),
             _buildToolCard(

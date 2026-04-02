@@ -234,6 +234,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get saveToMapMood => 'How do you feel?';
 
   @override
+  String get saveToMapFinalDecision => 'My final decision is...';
+
+  @override
   String get saveToMapSolutionHint => 'What did you decide to do?';
 
   @override
@@ -247,6 +250,9 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get settingsCopyId => 'Copy ID';
+
+  @override
+  String get settingsUserIdCopied => 'User ID copied to clipboard!';
 
   @override
   String get settingsRestoreData => 'Restore Data';
@@ -283,4 +289,72 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get settingsDeleteAccountError => 'Failed to delete account. Please try again.';
+
+  @override
+  String get coinFlipTitle => 'Coin Flip';
+
+  @override
+  String get coinFlipResultHeads => 'It\'s Heads!';
+
+  @override
+  String get coinFlipResultTails => 'It\'s Tails!';
+
+  @override
+  String get coinFlipResultEdge => 'It landed on the Edge!';
+
+  @override
+  String get coinFlipTapToFlip => 'Tap or shake to flip the coin';
+
+  @override
+  String get coinToolName => 'Coin Flip';
+
+  @override
+  String get coinResultHeads => 'Heads';
+
+  @override
+  String get coinResultTails => 'Tails';
+
+  @override
+  String get coinResultEdge => 'Edge';
+
+  @override
+  String get coinResultUnknown => 'Unknown';
+
+  @override
+  String get diceRollTitle => 'Dice Roll';
+
+  @override
+  String diceRollResult(String result) {
+    return 'You rolled a $result';
+  }
+
+  @override
+  String get diceRollTapToRoll => 'Tap or shake to roll';
+
+  @override
+  String get diceToolName => 'Dice Roll';
+
+  @override
+  String get fortuneStickTitle => 'Fortune Stick';
+
+  @override
+  String get fortuneStickShort => 'Short Stick';
+
+  @override
+  String get fortuneStickMedium => 'Medium Stick';
+
+  @override
+  String get fortuneStickLong => 'Long Stick';
+
+  @override
+  String get fortuneStickTapToDraw => 'Tap or shake to draw a stick';
+
+  @override
+  String get fortuneToolName => 'Fortune Stick';
+
+  @override
+  String get fortuneResultUnknown => 'Unknown';
+
+  @override
+  String get myFinalDecision => 'My final decision is...';
 }

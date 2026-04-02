@@ -103,7 +103,7 @@ class _OracleRandomSingleDrawScreenState extends State<OracleRandomSingleDrawScr
                     TextField(
                       controller: questionController,
                       decoration: const InputDecoration(
-                        hintText: "e.g., What should I focus on today?",
+                        // hintText: "e.g., What should I focus on today?",
                         border: OutlineInputBorder(),
                       ),
                     ),
@@ -132,7 +132,7 @@ class _OracleRandomSingleDrawScreenState extends State<OracleRandomSingleDrawScr
                     TextField(
                       controller: solutionController,
                       decoration: const InputDecoration(
-                        hintText: "e.g., I will meditate for 10 minutes.",
+                        // hintText: "e.g., I will meditate for 10 minutes.",
                         border: OutlineInputBorder(),
                       ),
                     ),
@@ -189,67 +189,69 @@ class _OracleRandomSingleDrawScreenState extends State<OracleRandomSingleDrawScr
     return Scaffold(
       backgroundColor: bgColor,
       appBar: _buildAppBar(context, l10n),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          const Spacer(),
-          SizedBox(
-            height: 480,
-            child: Center(
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(8),
-                  boxShadow: _isFaceUp ? [
-                    BoxShadow(
-                      color: goldColor.withAlpha(100),
-                      blurRadius: 25,
-                      spreadRadius: 2,
-                    )
-                  ] : [],
-                ),
-                child: TarotCardWidget(
-                  card: _drawnCard!,
-                  isFaceUp: _isFaceUp,
-                  isReversed: _isReversed!,
-                  animateOnTap: !_hasFlippedOnce,
-                  enableTilt: true,
-                  onFlip: _onCardFlipped,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SizedBox(
+              height: 480,
+              child: Center(
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8),
+                    boxShadow: _isFaceUp ? [
+                      BoxShadow(
+                        color: goldColor.withAlpha(100),
+                        blurRadius: 25,
+                        spreadRadius: 2,
+                      )
+                    ] : [],
+                  ),
+                  child: TarotCardWidget(
+                    card: _drawnCard!,
+                    isFaceUp: _isFaceUp,
+                    isReversed: _isReversed!,
+                    animateOnTap: !_hasFlippedOnce,
+                    enableTilt: true,
+                    onFlip: _onCardFlipped,
+                  ),
                 ),
               ),
             ),
-          ),
-          const Spacer(),
-          AnimatedOpacity(
-            opacity: _hasFlippedOnce ? 1.0 : 0.0,
-            duration: const Duration(milliseconds: 500),
-            child: _hasFlippedOnce
-                ? Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        _buildBottomInfo(l10n),
-                        const SizedBox(height: 10),
-                        ElevatedButton(
-                          onPressed: () => _showMeaningSheet(context, _drawnCard!, _isReversed!, l10n),
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: goldColor,
-                            foregroundColor: Colors.black,
-                            padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 15),
-                            shape: const StadiumBorder(),
-                          ),
-                          child: Text(
-                            l10n.singleDrawShowMeaning,
-                            style: const TextStyle(fontWeight: FontWeight.bold, letterSpacing: 1.2),
-                          ),
+            Padding(
+              padding: const EdgeInsets.only(top: 20.0),
+              child: AnimatedOpacity(
+                opacity: _hasFlippedOnce ? 1.0 : 0.0,
+                duration: const Duration(milliseconds: 500),
+                child: _hasFlippedOnce
+                    ? Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            _buildBottomInfo(l10n),
+                            const SizedBox(height: 10),
+                            ElevatedButton(
+                              onPressed: () => _showMeaningSheet(context, _drawnCard!, _isReversed!, l10n),
+                              style: ElevatedButton.styleFrom(
+                                backgroundColor: goldColor,
+                                foregroundColor: Colors.black,
+                                padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 15),
+                                shape: const StadiumBorder(),
+                              ),
+                              child: Text(
+                                l10n.singleDrawShowMeaning,
+                                style: const TextStyle(fontWeight: FontWeight.bold, letterSpacing: 1.2),
+                              ),
+                            ),
+                          ],
                         ),
-                      ],
-                    ),
-                  )
-                : const SizedBox.shrink(),
-          ),
-          const SizedBox(height: 70),
-        ],
+                      )
+                    : const SizedBox.shrink(),
+              ),
+            ),
+          ],
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         elevation: 0,
@@ -272,8 +274,8 @@ class _OracleRandomSingleDrawScreenState extends State<OracleRandomSingleDrawScr
 
   PreferredSizeWidget _buildAppBar(BuildContext context, AppLocalizations l10n) {
     return AppBar(
-      title: Text(l10n.oraclePickDailyDraw, style: const TextStyle(color: goldColor, letterSpacing: 1.5)),
-      centerTitle: true,
+      title: Text(l10n.bottomNavOracle, style: const TextStyle(color: goldColor, letterSpacing: 1.5)),
+      // centerTitle: true,
       backgroundColor: Colors.transparent,
       elevation: 0,
       leading: IconButton(

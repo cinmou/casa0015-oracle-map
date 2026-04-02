@@ -20,6 +20,7 @@ class _DiceRollScreenState extends State<DiceRollScreen> with SingleTickerProvid
   late Animation<double> _rotYAnimation;
 
   final double diceSize = 130.0;
+  static const bgColor = Color(0xFF083B2A);
 
   double _currentRotX = 0.0;
   double _currentRotY = 0.0;
@@ -140,9 +141,9 @@ class _DiceRollScreenState extends State<DiceRollScreen> with SingleTickerProvid
                     const SizedBox(height: 8),
                     TextField(
                       controller: questionController,
-                      decoration: const InputDecoration(
-                        hintText: "e.g., Should I apply for that job?",
-                        border: OutlineInputBorder(),
+                      decoration: InputDecoration(
+                        // hintText: l10n.saveToMapQuestionExample,
+                        border: const OutlineInputBorder(),
                       ),
                     ),
                     const SizedBox(height: 16),
@@ -165,13 +166,13 @@ class _DiceRollScreenState extends State<DiceRollScreen> with SingleTickerProvid
                       },
                     ),
                     const SizedBox(height: 16),
-                    Text("My final decision is...", style: Theme.of(context).textTheme.labelLarge), // TODO: Add to l10n
+                    Text(l10n.saveToMapFinalDecision, style: Theme.of(context).textTheme.labelLarge),
                     const SizedBox(height: 8),
                     TextField(
                       controller: solutionController,
-                      decoration: const InputDecoration(
-                        hintText: "e.g., I will go for it!",
-                        border: OutlineInputBorder(),
+                      decoration: InputDecoration(
+                        // hintText: l10n.saveToMapSolutionExample,
+                        border: const OutlineInputBorder(),
                       ),
                     ),
                   ],
@@ -221,12 +222,19 @@ class _DiceRollScreenState extends State<DiceRollScreen> with SingleTickerProvid
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
     return Scaffold(
+      backgroundColor: bgColor,
       appBar: AppBar(
-        title: Text(l10n.quickPickDiceRoll),
+        title: Text(l10n.quickPickDiceRoll, style: const TextStyle(color: Colors.white)),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back_ios, color: Colors.white),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
         actions: [
           if (_hasResult)
             IconButton(
-              icon: const Icon(Icons.bookmark_add_outlined),
+              icon: const Icon(Icons.bookmark_add_outlined, color: Colors.white),
               tooltip: l10n.saveToMap,
               onPressed: _showSaveDialog,
             ),
@@ -235,16 +243,30 @@ class _DiceRollScreenState extends State<DiceRollScreen> with SingleTickerProvid
       body: GestureDetector(
         behavior: HitTestBehavior.opaque,
         onTap: _rollDice,
-        child: SizedBox.expand(
-          child: Center(
-            child: AnimatedBuilder(
-              animation: _controller,
-              builder: (context, child) {
-                return IgnorePointer(
-                  child: _build3DDice(),
-                );
-              },
-            ),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              AnimatedBuilder(
+                animation: _controller,
+                builder: (context, child) {
+                  return IgnorePointer(
+                    child: _build3DDice(),
+                  );
+                },
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 60.0),
+                child: AnimatedOpacity(
+                  opacity: _hasResult ? 1.0 : 0.0,
+                  duration: const Duration(milliseconds: 300),
+                  child: Text(
+                    _hasResult ? l10n.diceRollResult(_currentFace.toString()) : "",
+                    style: Theme.of(context).textTheme.headlineSmall?.copyWith(color: Colors.white),
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
       ),
