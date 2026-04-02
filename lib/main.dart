@@ -33,6 +33,7 @@ void main() async {
   await historyProvider.init();
 
   final tarotProvider = TarotProvider();
+  // Initial load of tarot data based on initial settings
   await tarotProvider.init(settingsProvider.languageCode);
 
   final choiceProvider = ChoiceProvider();
@@ -48,9 +49,51 @@ void main() async {
         ChangeNotifierProvider.value(value: choiceProvider),
         ChangeNotifierProvider.value(value: settingsProvider),
       ],
-      child: const OracleApp(),
+      child: const TarotDataLoader(
+        child: OracleApp(),
+      ),
     ),
   );
+}
+
+class TarotDataLoader extends StatefulWidget {
+  final Widget child;
+  const TarotDataLoader({super.key, required this.child});
+
+  @override
+  State<TarotDataLoader> createState() => _TarotDataLoaderState();
+}
+
+class _TarotDataLoaderState extends State<TarotDataLoader> {
+  late String _currentLanguageCode;
+
+  @override
+  void initState() {
+    super.initState();
+    _currentLanguageCode = context.read<SettingsProvider>().languageCode;
+    print('--- [DEBUG] TarotDataLoader: initState - Initial language: $_currentLanguageCode ---');
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    final settingsProvider = context.watch<SettingsProvider>();
+    final newLanguageCode = settingsProvider.languageCode;
+    print('--- [DEBUG] TarotDataLoader: didChangeDependencies - Old language: $_currentLanguageCode, New language: $newLanguageCode ---');
+
+    if (_currentLanguageCode != newLanguageCode) {
+      print('--- [DEBUG] TarotDataLoader: Language changed from $_currentLanguageCode to $newLanguageCode. Reloading Tarot data. ---');
+      _currentLanguageCode = newLanguageCode;
+      context.read<TarotProvider>().loadTarotData(_currentLanguageCode);
+    } else {
+      print('--- [DEBUG] TarotDataLoader: Language is still $_currentLanguageCode. No reload needed. ---');
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return widget.child;
+  }
 }
 
 class OracleApp extends StatelessWidget {
@@ -59,6 +102,7 @@ class OracleApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final settings = context.watch<SettingsProvider>();
+    print('--- [DEBUG] OracleApp: build called. Current language setting: ${settings.languageCode} ---');
     return DynamicColorBuilder(
       builder: (ColorScheme? lightDynamic, ColorScheme? darkDynamic) {
         ColorScheme lightColorScheme = lightDynamic?.harmonized() ??
@@ -68,6 +112,7 @@ class OracleApp extends StatelessWidget {
             ColorScheme.fromSeed(seedColor: Colors.amber, brightness: Brightness.dark);
 
         return MaterialApp(
+          key: ValueKey(settings.languageCode), // Add this line
           debugShowCheckedModeBanner: false,
           onGenerateTitle: (context) => AppLocalizations.of(context)!.appTitle,
           localizationsDelegates: const [

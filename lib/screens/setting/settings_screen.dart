@@ -44,7 +44,7 @@ class SettingsScreen extends StatelessWidget {
       backgroundColor: colorScheme.surface,
       appBar: AppBar(
         title: Text(l10n.settingsTitle),
-        centerTitle: true,
+        // centerTitle: true,
         backgroundColor: Colors.transparent,
         elevation: 0,
         scrolledUnderElevation: 0,
