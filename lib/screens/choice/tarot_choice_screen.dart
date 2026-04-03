@@ -62,7 +62,7 @@ class _OracleRandomSingleDrawScreenState extends State<OracleRandomSingleDrawScr
 
   void _onCardFlipped() {
     if (!_hasFlippedOnce) {
-      HapticFeedback.mediumImpact();
+      // HapticFeedback.mediumImpact();
       setState(() {
         _isFaceUp = true;
         _hasFlippedOnce = true;
@@ -132,7 +132,8 @@ class _OracleRandomSingleDrawScreenState extends State<OracleRandomSingleDrawScr
                     TextField(
                       controller: solutionController,
                       decoration: const InputDecoration(
-                        // hintText: "e.g., I will meditate for 10 minutes.",
+                        //       await HapticFeedback.mediumImpact();
+                        //       await Future.delayed(const Duration(milliseconds: 5));hintText: "e.g., I will meditate for 10 minutes.",
                         border: OutlineInputBorder(),
                       ),
                     ),
