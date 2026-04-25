@@ -32,9 +32,20 @@ Oracle Map never makes the final choice for the user. It simply gives them a mom
 
 ## Biblography
 
-1. Last name, First initial. (Year published). Title. Edition. (Only include the edition if it is not the first edition) City published: Publisher, Page(s). <http://google.com>
+1. Flutter.dev. (2026). Flutter - Build apps for any screen. [online] Available at: https://flutter.dev/
 
-2. Last name, First initial. (Year published). Title. Edition. (Only include the edition if it is not the first edition) City published: Publisher, Page(s).  <http://google.com>
+
+2. OpenWeather. (2026). Current weather data - OpenWeatherMap. [online] Available at: https://openweathermap.org/current
+
+3. Baseflow. (2026). geolocator | Flutter package. [online] Available at: https://pub.dev/packages/geolocator
+
+4. Flutter Community. (2026). sensors_plus | Flutter package. [online] Available at: https://pub.dev/packages/sensors_plus
+
+5. Flutter.dev. (2026). image_picker | Flutter package. [online] Available at: https://pub.dev/packages/image_picker
+
+6. Dash-Overflow. (2026). provider | Flutter package. [online] Available at: https://pub.dev/packages/provider
+
+7. Google. (2026). Firebase Authentication & Cloud Firestore. [online] Available at: https://firebase.google.com/
 
 ----
 
